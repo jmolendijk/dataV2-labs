@@ -20,4 +20,5 @@ Start each block with a descriptive comment, and separate each block with 2 whit
 When working on GitHub, pull a request before editing the running code in order to seek approval of the team.
 Notice changes in the 'extended description' section.
 
-# Source : https://www.python.org/dev/peps/pep-0008/#type-variable-names
+# Source : 
+https://www.python.org/dev/peps/pep-0008/#type-variable-names
