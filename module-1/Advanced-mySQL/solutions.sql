@@ -1,46 +1,86 @@
--- Challenge 1 - Who Have Published What At Where?
+-- Challenge 1 - Most Profiting Authors
 
-SELECT authors.au_id as Authors_ID, authors.au_lname as Last_Name, authors.au_fname as First_Name, titles.title as Titles, publishers.pub_name as Publisher
-FROM authors
-JOIN titleauthor ON authors.au_id = titleauthor.au_id
-JOIN titles ON titleauthor.title_id = titles.title_id
-JOIN publishers ON titles.pub_id = publishers.pub_id;
+-- Step 1: Calculate the royalty of each sale for each author and the advance for each author and publication
 
-
-
--- Challenge 2 - Who Have Published How Many At Where?
-
-SELECT authors.au_id as Authors_ID, authors.au_lname as Last_Name, authors.au_fname as First_Name, publishers.pub_name as Publisher, COUNT(titles.title) as Title_Count
-FROM authors
-JOIN titleauthor ON authors.au_id = titleauthor.au_id
-JOIN titles ON titleauthor.title_id = titles.title_id
-JOIN publishers ON titles.pub_id = publishers.pub_id
-GROUP BY authors.au_id, authors.au_lname, authors.au_fname, publishers.pub_name
-ORDER BY Title_Count DESC;
+SELECT titles.title_id as 'Title_ID', titleauthor.au_id AS 'Author_ID', ROUND(titles.advance * titleauthor.royaltyper / 100) AS 'advance', ROUND(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS 'sales_royalty'
+FROM titles
+LEFT JOIN titleauthor
+ON titles.title_id = titleauthor.title_id
+LEFT JOIN sales
+ON titles.title_id = sales.title_id
+ORDER BY titles.title_id;
 
 
 
--- Challenge 3 - Best Selling Authors
+-- Step 2: Aggregate the total royalties for each title and author
 
-SELECT authors.au_id as Authors_ID, authors.au_lname as Last_Name, authors.au_fname as First_Name, SUM(qty) AS Total
-FROM authors
-JOIN titleauthor ON authors.au_id = titleauthor.au_id
-JOIN titles ON titleauthor.title_id = titles.title_id
-JOIN publishers ON titles.pub_id = publishers.pub_id
-JOIN sales ON titleauthor.title_id = sales.title_id
-GROUP BY authors.au_id, authors.au_lname, authors.au_fname, publishers.pub_name
-ORDER BY Total DESC
+SELECT Title_ID, Author_ID, SUM(sales_royalty)
+FROM (
+SELECT titles.title_id as 'Title_ID', titleauthor.au_id AS 'Author_ID', ROUND(titles.advance * titleauthor.royaltyper / 100) AS 'advance', ROUND(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS 'sales_royalty'
+FROM titles
+LEFT JOIN titleauthor
+ON titles.title_id = titleauthor.title_id
+LEFT JOIN sales
+ON titles.title_id = sales.title_id
+ORDER BY titles.title_id) summary
+GROUP BY Title_ID, Author_ID
+ORDER BY Title_ID;
+
+
+
+-- Step 3: Calculate the total profits of each author
+
+SELECT Author_ID, advance + total_royalty AS 'total_profit'
+FROM (
+SELECT Title_ID, Author_ID, SUM(sales_royalty) AS 'total_royalty', advance
+FROM (
+SELECT titles.title_id as 'Title_ID', titleauthor.au_id AS 'Author_ID', ROUND(titles.advance * titleauthor.royaltyper / 100) AS 'advance', ROUND(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS 'sales_royalty'
+FROM titles
+LEFT JOIN titleauthor
+ON titles.title_id = titleauthor.title_id
+LEFT JOIN sales
+ON titles.title_id = sales.title_id
+ORDER BY titles.title_id) summary
+GROUP BY Author_ID
+ORDER BY Author_ID) summary2;
 LIMIT 3;
 
 
 
--- Challenge 4 - Best Selling Authors Ranking
+-- Challenge 2 - Alternative Solution
 
-SELECT authors.au_id as Authors_ID, authors.au_lname as Last_Name, authors.au_fname as First_Name, SUM(qty) AS Total
-FROM authors
-JOIN titleauthor ON authors.au_id = titleauthor.au_id
-JOIN titles ON titleauthor.title_id = titles.title_id
-JOIN publishers ON titles.pub_id = publishers.pub_id
-JOIN sales ON titleauthor.title_id = sales.title_id
-GROUP BY authors.au_id, authors.au_lname, authors.au_fname, publishers.pub_name
-ORDER BY Total DESC;
+CREATE TEMPORARY TABLE temporary_table
+SELECT Author_ID, advance + total_royalty AS 'total_profit'
+FROM (
+SELECT Title_ID, Author_ID, SUM(sales_royalty) AS 'total_royalty', advance
+FROM (
+SELECT titles.title_id as 'Title_ID', titleauthor.au_id AS 'Author_ID', ROUND(titles.advance * titleauthor.royaltyper / 100) AS 'advance', ROUND(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS 'sales_royalty'
+FROM titles
+LEFT JOIN titleauthor
+ON titles.title_id = titleauthor.title_id
+LEFT JOIN sales
+ON titles.title_id = sales.title_id
+ORDER BY titles.title_id) summary
+GROUP BY Author_ID
+ORDER BY Author_ID) summary2
+LIMIT 3;
+
+
+
+-- Challenge 3
+
+CREATE TABLE most_profiting_authors_leon
+SELECT Author_ID AS 'Author ID', advance + total_royalty AS 'Profits'
+FROM (
+SELECT Title_ID, Author_ID, SUM(sales_royalty) AS 'total_royalty', advance
+FROM (
+SELECT titles.title_id as 'Title_ID', titleauthor.au_id AS 'Author_ID', ROUND(titles.advance * titleauthor.royaltyper / 100) AS 'advance', ROUND(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS 'sales_royalty'
+FROM titles
+LEFT JOIN titleauthor
+ON titles.title_id = titleauthor.title_id
+LEFT JOIN sales
+ON titles.title_id = sales.title_id
+ORDER BY titles.title_id) summary
+GROUP BY 1, 2
+ORDER BY 1) summary2
+LIMIT 3;
