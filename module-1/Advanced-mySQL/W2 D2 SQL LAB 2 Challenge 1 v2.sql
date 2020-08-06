@@ -17,7 +17,7 @@ JOIN titleauthor on authors.au_id = titleauthor.au_id
 JOIN titles on titleauthor.title_id = titles.title_id 
 JOIN sales on titles.title_id = sales.title_id;
 
-# Step 2 : Aggregate the total royalties for each title and author .... I couldn't figure out how to SUM(sales_royalty)
+# Step 2 : Aggregate the total royalties for each title and author 
 
 SELECT 
 authors.au_id,  
