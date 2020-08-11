@@ -3,7 +3,7 @@ import string
 import random 
 
 
-def get_random_string(length):
+def new_string(length):
     letters = string.ascii_lowercase+string.digits
     str = ''.join(random.choice(letters) for num in range(length))
     return str
@@ -42,12 +42,13 @@ def string_gen ():
     final_length = random.choice(final_length)
     
     while number_of_strings > 0:
-        string = get_random_string(final_length)
+        string = new_string(final_length)
         strings.append(string)
         number_of_strings = number_of_strings - 1
         
     return strings
             
 print(string_gen())
+
 
 
