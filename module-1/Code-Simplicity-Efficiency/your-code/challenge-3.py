@@ -23,8 +23,27 @@ def my_function(X):
     for solution in solutions:
         if m < max(solution):
             m = max(solution)
-    return m
+    return solutions
 
 X = input("What is the maximal length of the triangle side? Enter a number: ")
 
 print("The longest side possible is " + str(my_function(int(X))))
+
+
+
+def function_two (): 
+    number = input("What is the maximal length of the triangle side? Enter a number: ")
+    number = int(number)
+    solution = [(num1, num2, num3) for num1 in range(5, number) 
+                                   for num2 in range(4, number) 
+                                   for num3 in range(3, number)
+                                   if num1*num1 == (num2*num2 + num3*num3)]
+    m = 0 
+    for answer in solution: 
+        if m < max(answer): 
+            m = max(answer)
+    return "The longest possible site = "+str(m)
+
+
+print(function_two())
+
