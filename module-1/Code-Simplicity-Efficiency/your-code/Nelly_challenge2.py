@@ -6,6 +6,8 @@ the strings being generated.
 
 The code is functional but has a lot of room for improvement. Use what you have learned
 about simple and efficient code, refactor the code.
+
+MY SOLUTION : REPLACE THE LONG STRING OF CHARACTERS , 
 """
 
 import string
@@ -14,15 +16,15 @@ list1= list(string.ascii_lowercase+string.digits)
 
 def RandomStringGenerator(l=12, a=list1):
     p = 0
-    s = ''
+    strings = ''
     while p<l:
         import random
-        s += random.choice(a)
+        strings += random.choice(a)
         p += 1
-    return s
+    return strings
 
 def BatchStringGenerator(n, a=8, b=12):
-    r = []
+    result = []
     for i in range(n):
         c = None
         if a < b:
@@ -34,7 +36,7 @@ def BatchStringGenerator(n, a=8, b=12):
             import sys
             sys.exit('Incorrect min and max string lengths. Try again.')
         r.append(RandomStringGenerator(c))
-    return r
+    return result
 
 a = input('Enter minimum string length: ')
 b = input('Enter maximum string length: ')
