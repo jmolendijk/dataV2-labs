@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red194\green126\blue101;\red23\green23\blue23;\red202\green202\blue202;
+\red183\green111\blue179;\red70\green137\blue204;\red212\green214\blue154;\red167\green197\blue152;\red67\green192\blue160;
+\red205\green173\blue106;}
+{\*\expandedcolortbl;;\cssrgb\c80784\c56863\c47059;\cssrgb\c11765\c11765\c11765;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c77255\c52549\c75294;\cssrgb\c33725\c61176\c83922;\cssrgb\c86275\c86275\c66667;\cssrgb\c70980\c80784\c65882;\cssrgb\c30588\c78824\c69020;
+\cssrgb\c84314\c72941\c49020;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 """\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 FEEDBACK\cf4 \cb1 \strokec4 \
+\
+\cf2 \cb3 \strokec2 I changed the instructions to be more clear \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 I added 3 seconds before printing these instructions\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 I set the max rounds to be 5 instead of 8 \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 I added the rule that first number can't be 50\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 I deleted the break at the end of some if statements \cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 """\cf4 \cb1 \strokec4 \
+\
+\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb3 \strokec5 import\cf4 \strokec4  random\cb1 \
+\cf5 \cb3 \strokec5 from\cf4 \strokec4  random \cf5 \strokec5 import\cf4 \strokec4  randint\cb1 \
+\cf5 \cb3 \strokec5 import\cf4 \strokec4  time\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf6 \cb3 \strokec6 def\cf4 \strokec4  \cf7 \strokec7 computer_number\cf4 \strokec4 ():\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3     num = randint(\cf8 \strokec8 1\cf4 \strokec4 ,\cf8 \strokec8 100\cf4 \strokec4 )\cb1 \
+\cb3     \cf5 \strokec5 return\cf4 \strokec4  num\cb1 \
+\
+\cb3 computer = computer_number()\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 \strokec7 print\cf4 \strokec4  (\cf2 \strokec2 "Hello welcome to Guess the number game!"\cf4 \strokec4  )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 time.sleep(\cf8 \strokec8 3\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 \strokec7 print\cf4 \strokec4 ()\cb1 \
+\cf7 \cb3 \strokec7 print\cf4 \strokec4  (\cf2 \strokec2 "Rule 1: You have only 5 tries to guess a random number between 1 and 100."\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 time.sleep(\cf8 \strokec8 3\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 \strokec7 print\cf4 \strokec4  (\cf2 \strokec2 "Rule 2: Your first number can't be 50."\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 time.sleep(\cf8 \strokec8 3\cf4 \strokec4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 \strokec7 print\cf4 \strokec4 ()\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3 player_number = \cf9 \strokec9 int\cf4 \strokec4 (\cf7 \strokec7 input\cf4 \strokec4 (\cf2 \strokec2 "Pick a number between 1 and 100."\cf4 \strokec4 )) \cb1 \
+\cb3 rounds = \cf8 \strokec8 4\cf4 \strokec4  \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Tries left:"\cf4 \strokec4 , rounds)\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb3 \strokec5 while\cf4 \strokec4  player_number != computer: \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3     \cf5 \strokec5 if\cf4 \strokec4  player_number > \cf8 \strokec8 100\cf4 \strokec4  \cf6 \strokec6 or\cf4 \strokec4  player_number < \cf8 \strokec8 1\cf4 \strokec4 :\cb1 \
+\cb3         \cf7 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Error! The number should be between 1 and 100."\cf4 \strokec4 )\cb1 \
+\cb3     \cf5 \strokec5 if\cf4 \strokec4  player_number > computer:\cb1 \
+\cb3         \cf7 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Lower"\cf4 \strokec4 )\cb1 \
+\cb3         player_number = \cf9 \strokec9 int\cf4 \strokec4 (\cf7 \strokec7 input\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Pick again."\cf4 \strokec4 ))\cb1 \
+\cb3         rounds -= \cf8 \strokec8 1\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 elif\cf4 \strokec4  player_number < computer:\cb1 \
+\cb3         \cf7 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Higher"\cf4 \strokec4 )\cb1 \
+\cb3         player_number = \cf9 \strokec9 int\cf4 \strokec4 (\cf7 \strokec7 input\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Pick again."\cf4 \strokec4 ))\cb1 \
+\cb3         rounds -= \cf8 \strokec8 1\cf4 \cb1 \strokec4 \
+\cb3     \cf7 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 Tries left:"\cf4 \strokec4 , rounds)\cb1 \
+\cb3     \cf5 \strokec5 if\cf4 \strokec4  rounds == \cf8 \strokec8 0\cf4 \strokec4 :\cb1 \
+\cb3         \cf7 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 You lost!"\cf4 \strokec4 )\cb1 \
+\cb3         \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \cb3 \strokec5 else\cf4 \strokec4 : \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb3     \cf7 \strokec7 print\cf4 \strokec4 (\cf2 \strokec2 "\cf10 \strokec10 \\n\cf2 \strokec2 You won in"\cf4 \strokec4 , \cf8 \strokec8 6\cf4 \strokec4 -rounds, \cf2 \strokec2 "tries!"\cf4 \strokec4 )\cb1 \
+}
