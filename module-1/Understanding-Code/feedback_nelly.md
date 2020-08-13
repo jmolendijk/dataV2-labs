@@ -6,7 +6,7 @@
 
 1. Your trello board or a picture is missing wether as a file/picture or as a link in your README file.
 2. Same for the slides.
-3. The gitignore file is missing too.
+3. The .gitignore file is missing too.
 
 ## Workflow
 
@@ -25,8 +25,9 @@ Though, I like the comments you add at the end of your code along with the sourc
 
 1. Add \n to another print to avoid printing print("")
 2. Keep your functions simple and give them only one purpose : paswword generator should only generate a password, you could have created a function ask_user for exemple 
-3. To avoid condition on yes and no, answer.lower() == yes fro example
+3. To avoid condition on yes and no, answer.lower() == yes for example
 4. Divide your crypto code in 2 functions : one to encrypt a given password return the key and encrypted password; and one to decrypt a password given the key and encrypted password!
+5. At the very end, convert your password decrypted from a list of strings to a single string to make it more readable for the user.
 
 
 ## Bonus
