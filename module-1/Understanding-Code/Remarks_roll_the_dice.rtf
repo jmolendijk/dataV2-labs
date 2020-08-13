@@ -1,0 +1,198 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid1\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+
+\f1\b\fs28 Game: Roll the dice 
+\f0\b0\fs24 \
+Author: L\'e9on\
+\
+Remarks by Bert  \
+\
+
+\f1\b \ul Remarks:
+\f0\b0 \ulnone  \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1)	}The end of the game is not always right: \
+{\listtext	2)	}Sometimes it stops at -1 or when both sides have 0 \'97> player wins\
+{\listtext	3)	}Code is too long for the gameplay\
+{\listtext	4)	}Put the game in one function our class\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b \ul Workflow: 
+\f0\b0 \ulnone \
+I had the feeling you just started writing code, maybe it\'92s better to brainstorm a little bit longer so you can add more details. \
+Maybe have more attention for Pseudo code so that you can make a good structure. \
+\
+\
+
+\f1\b \ul Useful: 
+\f0\b0 \ulnone \
+- Timers\
+- Look and feel off the program\
+- Logic of the game\
+\
+\
+Grows & Flows: \
+We have decided to complete the game with visuals and all the features of the dice game in week 10 of our bootcamp.\
+(We gonna make a teamproject of this!)\
+\
+\
+
+\f1\b \ul Improvements: 
+\f0\b0 \ulnone \
+- Make more functions\
+- Maybe use a class - function \
+- I rewrite the code as following\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 import random \
+from time import sleep\
+\
+#Timers\
+sleep_time_short = 0.1\
+sleep_time_long = 0.2\
+sleep_time_extra_long = 0.5\
+\
+def welcome (): \
+    sleep(sleep_time_long)\
+    print("\\n Welcome to playing Risk!")\
+    sleep(sleep_time_long)\
+    print()\
+    print('*' * 79)\
+    sleep(sleep_time_long)\
+    print()\
+\
+\
+def roll_dice ():\
+    dice = random.randint(1, 6)\
+    return dice\
+\
+def get_playername():\
+    playername = input("What is your name? ")\
+    return playername\
+\
+def dice_roll_player_3(): \
+    dices = [] \
+    while True:\
+         number_dice = int(input("Which option do you choose? \\n roll with 1 dice\\n roll with 2 dices\\n roll with 3 dices\\n Give your choice.... "))\
+         if number_dice == 1: \
+             dice_one = roll_dice()\
+             dices.append(dice_one)\
+             break\
+         elif number_dice == 2: \
+             dice_one = roll_dice()\
+             dice_two = roll_dice()\
+             dices.append(dice_one)\
+             dices.append(dice_two)\
+             break\
+         elif number_dice == 3: \
+             dice_one = roll_dice()\
+             dice_two = roll_dice()\
+             dice_three = roll_dice()\
+             dices.append(dice_one)\
+             dices.append(dice_two)\
+             dices.append(dice_three)\
+             break\
+         else: \
+             print("You need to make a choose ")\
+    return dices\
+\
+\
+def dice_roll_player_2(): \
+    dices = [] \
+    while True: \
+         number_dice = int(input("Which option do you choose? \\n roll with 1 dice\\n roll with 2 dices\\n roll with 3 dices\\n Give your choice.... "))\
+         if number_dice == 1: \
+             dice_one = roll_dice()\
+             dices.append(dice_one)\
+             break\
+         elif number_dice == 2: \
+             dice_one = roll_dice()\
+             dice_two = roll_dice()\
+             dices.append(dice_one)\
+             dices.append(dice_two)\
+             break\
+         else: \
+             print("You need to make a choose ")\
+    return dices\
+\
+\
+\
+\
+    \
+def risk (): \
+    welcome()\
+    player_name = get_playername()\
+    player_live = 10 \
+    computer_live = 10\
+    while True: \
+        playing = input("Type R to roll the dice or type Q to quit: ").lower()\
+        player_dices = []\
+        if playing == 'q':\
+            result = "See you next time! "\
+            break\
+        elif playing == 'r' and player_live > 3: \
+           player_dices.append(dice_roll_player_3())\
+        elif playing == 'r' and player_live > 2: \
+            player_dices.append(dice_roll_player_2())\
+        elif playing == 'r' and player_live == 1: \
+            player_dices.append(dice_one = roll_dice())\
+        elif playing != 'r' or playing != 'q': \
+            print("You need to type an R or Q")\
+        \
+        computer_dices = []\
+        if computer_live != 1: \
+            dice_pc_one = roll_dice()\
+            dice_pc_two = roll_dice()\
+            computer_dices.append(dice_pc_one)\
+            computer_dices.append(dice_pc_two)\
+        else: \
+            compter_dices.append(roll_dice())\
+        \
+        player_dices.sort(reverse=True)\
+        computer_dices.sort(reverse=True)\
+        \
+        print(player_dices)\
+        print()\
+        print(computer_dices)\
+        \
+        length = len(player_dices)\
+        for number in range(length): \
+            if player_dices[0] == computer_dices[0]: \
+                continue\
+            elif player_dices[0] > computer_dices: \
+                computer_live = computer_live - 1\
+                if computer_live == 0: \
+                    break\
+            elif player_dices[0] < computer_dices:\
+                player_live = player_live - 1\
+                if player_live == 0:\
+                    break\
+                \
+        print(player_name, "has", player_live, "units left")\
+        print("The CPU has", computer_live, "units left")\
+        print()\
+        print('*' * 79)\
+    \
+    if player_live > computer_live: \
+        answer = "Winner winner chicken diner, you have won the game"\
+    elif computer_live > player_live: \
+        answer = "The computer was to strong!"\
+    return answer\
+\
+print(risk())\
+    \
+\
+\
+\
+}
