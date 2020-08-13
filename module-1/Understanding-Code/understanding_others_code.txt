@@ -1,0 +1,7 @@
+1. The lets play block should go the the bottom for not get a error message.
+
+2. I would keep imports as a separate block if you would reorder the blocks and some block can’t run.
+
+3. Maybe you could use some extra seperation between the answer to make it visually more appealing and give it more of a game feeling.
+
+4. There is no way to play the game again without running the script again.
