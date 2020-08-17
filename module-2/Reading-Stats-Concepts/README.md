@@ -13,7 +13,22 @@ Remember for this lab: there is a right answer. But there is no perfect way to e
 ## Challenges
 
 ### Challenge 1: What is the difference between expected value and mean?
-You know both concepts but, is there a difference? Are they synonims? Start investigating. 
+You know both concepts but, is there a difference? Are they synonims? Start investigating.
+
+1) mean = the sum of all the values, divided by the number of values
+2) expected value = a sum in which each term is a possible value of the random variable multiplied by the probability of that outcome
+
+Testing:
+For example, rolling a fair 3-sided die:
+1) (2+3+2)/3 = 2.3333
+2) (1 * 1/3) + (2 * 1/3) + (3 * 1/3) = 2
+Not equal!
+They both divide by 3, but expected value takes all the possible outcomes one by one(1,2,3). 
+Mean takes the real outcomes, finite list of different values (they may repeat, etc.)(2,3,2 - for example).
+But if the number of throws is very big, these two numbers may become equal, because that is where we apply probability. And the probability that we get 1,2 or 3 as an outcome is 1/3 for each. Depending on the number of throws, the mean value will always be somewhere around the expected value.
+
+So the answer is: they are not complete synonyms, but their values are equal in the long run (because that is how probability actually works).
+
 
 As a good reference (once you have looked for some information) you have   [this](http://expected.news/value2) article.
 
