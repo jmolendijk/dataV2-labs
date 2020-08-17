@@ -37,14 +37,14 @@ Ok I'll go witht the Netflix article " Selecting the best artwork" which in this
 
 *Click here to discover cool games!*
 
-In this case I'll use the explore/exploi test which will be based on the different ways to design and present the button to the user.
+In this case I'll use the explore/exploit test which will be based on the different ways to design and present the button to the user.
 
 EXPLORE TEST BUTTONS : Based on the different ways to design and present the button to the user.
 
 Button 1: steady button with a pop-up color.
 Button 2: blinking button with a pop-up color. 
 
-Note: an optional paramether would be "when" do we display the new button. 
+Note: an optional parameter would be "when" do we display the new button. 
 
 Time 1 : Displayed after won a game, we show the *Click here to discover more cool games!* since they were exited after a good result of the previous game they must feel confident and are more likely to try new things.
 Time 2 : On the main page as banner , like this one  https://www.i-teamglobal.com/en/News/New-website  it can say:  Our new games are live! and then we show the button.
