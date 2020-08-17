@@ -21,6 +21,7 @@ Testing:
 For example, rolling a fair 3-sided die:
 1) (2+3+2)/3 = 2.3333
 2) (1 * 1/3) + (2 * 1/3) + (3 * 1/3) = 2
+
 Not equal!
 They both divide by 3, but expected value takes all the possible outcomes one by one(1,2,3). 
 Mean takes the real outcomes, finite list of different values (they may repeat, etc.)(2,3,2 - for example).
