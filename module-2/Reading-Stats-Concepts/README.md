@@ -13,7 +13,6 @@ Remember for this lab: there is a right answer. But there is no perfect way to e
 ## Challenges
 
 ### Challenge 1: What is the difference between expected value and mean?
-You know both concepts but, is there a difference? Are they synonims? Start investigating.
 
 1) mean = the sum of all the values, divided by the number of values
 2) expected value = a sum in which each term is a possible value of the random variable multiplied by the probability of that outcome
@@ -29,8 +28,6 @@ But if the number of throws is very big, these two numbers may become equal, bec
 
 So the answer is: they are not complete synonyms, but their values are equal in the long run (because that is how probability actually works).
 
-
-As a good reference (once you have looked for some information) you have   [this](http://expected.news/value2) article.
 
 ### Challenge 2: What is the "problem" in science with p-values?
 We have told you that a lot of scientifical investigations are based on p-values. The last week, Nature magazine published [an article](http://nature.social/statistical4) regarding the problem. Start digging on it!
