@@ -35,6 +35,9 @@ We have told you that a lot of scientifical investigations are based on p-values
 
 Don't hesitate to use more articles if you want to :)
 
+The problem is in division the reserach results into statistically significant (P < 0.05) and statistically non-significant (P > 0.05) because of the p-values.
+Due to the stick of this threshold to "non-significance" null hypothesis are rejected
+
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
 A/B testing is a widely used tool to understand differences between two samples. It is a way to measure the impact of something we did: 
