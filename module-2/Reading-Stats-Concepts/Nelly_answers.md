@@ -15,47 +15,54 @@ Expected value : Is the long-term "average" value for the repetitions of the exp
 For example, in a experiment like the flipping a coin, the mean and expected value are the same since the conditions of the experiment are equal (only heads or tail). The difference is that if the experiment the conditions are not fair then it could be that the mean and expected value may not be the same. 
 
 ### Challenge 2: What is the "problem" in science with p-values?
-We have told you that a lot of scientifical investigations are based on p-values. The last week, Nature magazine published [an article](http://nature.social/statistical4) regarding the problem. Start digging on it!
 
-Don't hesitate to use more articles if you want to :)
+P-values can help to compare results between two groups. For example,the actual study group and the placebo group. 
+The p-value will ranges from 0 to 1, and it will tell us the probability that the subjects will present the observed result if there's no real difference between the to groups. 
+
+In general the lower the p value is the better, since hypotetically 0 means that the result is definitely based on the thing we're testing and 1 means the results are based on other than the thing we're testing. But they are extremes, in general a p value of 0,05 is considered statistically significant and they are more likely to be piublished.
+
+
+PROBLEMS: 
+- Over emphasis of p values often leads to neglect other information is studies like side effects.
+- Sientists can manipulate data to get the lowest possible p-value.
+- Wrong interpretations like assuming that non-signifficance means no effect. ( like for dugs possible side effects )
+- P values being too general, they should be given with precision like P = 0.021 or P = 0.13) instead of P  < 0.05 or P > 0.05.
+
+Example: A drug manufacturer wants to launch a new drug for hair growt. After conducting the study the result is a P = .05 which means that there is a small probalility that the hair growt came from something else than the tested drug so you are more likely to but the drug. But what the p value doesn't tell us is about actual result , maybe they did have results but they just grew two hairs or three lol so technically the subjects are still bold!
 
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
-A/B testing is a widely used tool to understand differences between two samples. It is a way to measure the impact of something we did: 
-* A marketing campaign.
-* A new feature in our application. 
-* A new design in our application.
-* A different flow in the User Experience flow.
 
-To do this, is very important first to design our experiment. 
-* We need to know how we are measuring the impact. If people has the behaviour we want with this new implementation.
-* We choose a control group (people who doesn't have/see the new change) and the group which will see the new change. 
-* We think about how much data do we need.
-* We measure the difference between them.
-
-One example:
-Our application has a lot of mini-games. We want people to reach the games that we think are the best but the behaviour is not the expected, they don't reach them.
-
-So we call a designer and after a lot of work he shows us a new design for our application: we will add a botton specific for that kinf of games inviting the users to click on it:
+Ok I'll go witht the Netflix article " Selecting the best artwork" which in this case the artwork will be our new button:
 
 *Click here to discover cool games!*
 
-We think it will work but can we be sure? So instead of implementing this new botton for all users, we implement it for 10% and we compare the results with the users that didn't have it. Is there a significant difference? Is our botton working?
+In this case I'll use the explore/exploi test which will be based on the different ways to design and present the button to the user.
 
-Read more about A/B testing with a couple of examples:
+EXPLORE TEST BUTTONS : Based on the different ways to design and present the button to the user.
 
-[Another example about Netflix here](http://select.video/artwork4)
+Button 1: steady button with a pop-up color.
+Button 2: blinking button with a pop-up color. 
 
-[What happened to Basecamp](http://millions.social/tested7)
+Note: an optional paramether would be "when" do we display the new button. 
 
-[An example with Python](http://math.social/tested3)
+Time 1 : Displayed after won a game, we show the *Click here to discover more cool games!* since they were exited after a good result of the previous game they must feel confident and are more likely to try new things.
+Time 2 : On the main page as banner , like this one  https://www.i-teamglobal.com/en/News/New-website  it can say:  Our new games are live! and then we show the button.
 
-[A cool general explanation](http://arts.show/tested7)
+So we will end up with 4 options for the most engaging button:
 
-So, take one single example in the articles you just read, which specific test/s would you apply? (We want you just to do a draft and think a little bit how to apply the tests you already know in this case)
+Button1-Time1
+Button1-Time2
+Button2-Time1
+Button2-Time2
 
-## Deliverables
-You need to submit a markdown file with the answers to the questions above. You can create a new `.md` file or directly edit the `README.md`.
 
-## Submission
-Upon completion, add your deliverables to git. Then commit git and push your branch to the remote.
+EXPLOIT TEST BUTTONS : To measure the performance once they clicked a particilar button.
+
+How many games they played after clicking each button.
+How long they played a particular game. 
+How long they stayed using the App.
+
+
+Also is very important when choosing the A/B testing, how can we know that the new games are relevant to the users preferences? maybe the button worked just fine but the new games we provided were just not relevant to the users or they were just not very good games. 
+
