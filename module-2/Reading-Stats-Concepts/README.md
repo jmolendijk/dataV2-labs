@@ -31,12 +31,18 @@ So the answer is: they are not complete synonyms, but their values are equal in 
 
 
 ### Challenge 2: What is the "problem" in science with p-values?
-We have told you that a lot of scientifical investigations are based on p-values. The last week, Nature magazine published [an article](http://nature.social/statistical4) regarding the problem. Start digging on it!
 
-Don't hesitate to use more articles if you want to :)
+We have H0 (trying to provide evedence against it). We take the sample and do tests. We get a p-value that shows how likely it is to get a statistic like this if H0 is true. 
 
-The problem is in division the reserach results into statistically significant (P < 0.05) and statistically non-significant (P > 0.05) because of the p-values.
-Due to the stick of this threshold to "non-significance" null hypothesis are rejected
+p-value answers the question "does this provide enough evidence?". The more the value is, the more evidence there is. If p-value is small, this idea must be wrong, so we reject H0.
+
+
+The problem in science is in division p-values into statistically significant (P < 0.05, strong evidence against the null hypothesis) and statistically non-significant (P > 0.05, strong evidence for the null hypothesis) because of the p-value.
+Due to the strict adherence to this threshold, many null hypothesis are rejected as there is less than a 5% probability that the H0 is correct. But still there is! Just because of this number we accept the alternative hypothesis. 
+Also it is important to emphasize that p-value is unrelated to the truth or falsity of the research hypothesis (does not mean that there is a 95% probability that the research hypothesis is true).
+
+
+What scientists argue about is: what counts as solid evidence? Quote: “We propose a change to P< 0.005. This simple step would immediately improve the reproducibility of scientific research in many fields.”
 
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
