@@ -39,45 +39,26 @@ p-value answers the question "does this provide enough evidence?". The more the 
 
 The problem in science is in division p-values into statistically significant (P < 0.05, strong evidence against the null hypothesis) and statistically non-significant (P > 0.05, strong evidence for the null hypothesis) because of the p-value.
 Due to the strict adherence to this threshold, many null hypothesis are rejected as there is less than a 5% probability that the H0 is correct. But still there is! Just because of this number we accept the alternative hypothesis. 
-Also it is important to emphasize that p-value is unrelated to the truth or falsity of the research hypothesis (does not mean that there is a 95% probability that the research hypothesis is true).
+Also it is important to emphasize that p-value is unrelated to the truth or falsity of the research hypothesis (does not mean that there is a 95% probability that the research hypothesis is true). Rejecting the null doesn’t tell you anything about the mechanism of the main research.
 
 
-What scientists argue about is: what counts as solid evidence? Quote: “We propose a change to P< 0.005. This simple step would immediately improve the reproducibility of scientific research in many fields.”
+What scientists argue about is: what counts as solid evidence? Quote: “We propose a change to P< 0.005. This simple step would immediately improve the reproducibility of scientific research in many fields.”  Statisticians realized that a p<0.05 is not as strong of evidence as they thought (they assumed that p<0.05 is very unlikely to face). Statistical significance should mean that the hypothesis should be tested further. But this change requires stronger evidence, therefore, more work.
 
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
-A/B testing is a widely used tool to understand differences between two samples. It is a way to measure the impact of something we did: 
-* A marketing campaign.
-* A new feature in our application. 
-* A new design in our application.
-* A different flow in the User Experience flow.
 
-To do this, is very important first to design our experiment. 
-* We need to know how we are measuring the impact. If people has the behaviour we want with this new implementation.
-* We choose a control group (people who doesn't have/see the new change) and the group which will see the new change. 
-* We think about how much data do we need.
-* We measure the difference between them.
+Okay, let's take the example of Sephora SEA. They want to rearrange a landing page of the website for the Gold members.
+Algorithm of measures to perform A/B testing:
 
-One example:
-Our application has a lot of mini-games. We want people to reach the games that we think are the best but the behaviour is not the expected, they don't reach them.
+1. Choose what you want to test - Landing page
+2. Identify your goal - Conversion increases and ends up with a purchase.
+You also need to state a hypothesis (identify areas of visitor activity, make a guess about a change that might lead to more conversions)
+3. Create a 'control' and a 'challenger.' - 'Control' is the landing page showing just several products. 'Challenger' - the same pictures, but with the price on each.
+4. Organize sample groups. - Let's take 1000 people for each group. 
+5. Pick a tool how to test - The tool would be to send advertising email, attracting to the website. Then we show the first group the 'old' website and the new version for the other group.
+6. Decide with the results criteria. Let's say that if 20% of the 'challenger' ends up with a purchase, then we change the website to the new version and invite all other guests to see it.
+It may be also useful to ask for feedback in a different email ('evaluate our new website with a score...')
 
-So we call a designer and after a lot of work he shows us a new design for our application: we will add a botton specific for that kinf of games inviting the users to click on it:
-
-*Click here to discover cool games!*
-
-We think it will work but can we be sure? So instead of implementing this new botton for all users, we implement it for 10% and we compare the results with the users that didn't have it. Is there a significant difference? Is our botton working?
-
-Read more about A/B testing with a couple of examples:
-
-[Another example about Netflix here](http://select.video/artwork4)
-
-[What happened to Basecamp](http://millions.social/tested7)
-
-[An example with Python](http://math.social/tested3)
-
-[A cool general explanation](http://arts.show/tested7)
-
-So, take one single example in the articles you just read, which specific test/s would you apply? (We want you just to do a draft and think a little bit how to apply the tests you already know in this case)
 
 ## Deliverables
 You need to submit a markdown file with the answers to the questions above. You can create a new `.md` file or directly edit the `README.md`.
