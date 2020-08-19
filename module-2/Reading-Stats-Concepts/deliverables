@@ -1,3 +1,23 @@
 Challenge 1: What is the difference between expected value and mean?
 
 Mean is the average of a certain group of values. Expected values is something that can be calculated over time.
+
+
+
+Challenge 2: What is the "problem" in science with p-values?
+
+The P-Values are used as a line or threshold that certain values have to pass to be considered as 'statistical significant'.
+Different studies in the scientific community are presenting data that is not crossing this value as non statistical significant.
+This doesn't have to be the case because even the significance may be small there is still a possibility that it has a big impact.
+Scientist could possible just focus on data that has significance and because of that maybe not investigate other important data.
+
+
+
+Challenge 3: Applying testing to a specific case: A/B testing.
+
+I choice the Netflix example.
+You could do a test where 2 (or more) group would see a array of pictures of a certain movie or tv show.
+You let every user clicks on one of the 2 pictures you present of a given movie or tv show.
+You make a dataset of all those choices and you can figure out which one gets chosen the most.
+This would be your prefer way to show a picture for the user.
+You can also store the data for every individual test subjects, for there preference when it comes to choice.
