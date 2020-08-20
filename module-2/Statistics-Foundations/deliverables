@@ -1,0 +1,78 @@
+Challenge 1
+
+A.
+You get two pairs of values from 1 to 6.
+
+B.
+There is a sum of 12 possible values.
+
+C.
+The maximum value obtained can be 12.
+
+
+Case A:
+Both values have to be a 6.
+
+Case B:
+We can only use the even numbers of both dice.
+So that means only 2, 4 and 6.
+This means that we can only can have a sum of mixing these numbers.
+
+Case C:
+The maximum we can roll is 6 for both of them so that means 12.
+
+
+
+Challenge 2
+
+A.
+There 3 different figures to pick and that 4 times for the different clubs (♣), diamonds (♦), hearts (♥) and spades.
+
+B.
+That would be 13 * 4 and that would be 52.
+
+C.
+There are 4 options and 2 cards to pick so that means he has a 50% change or 1/2 change on the first try.
+For the second card there is one card missing and he change increases or decreases depending on the first card. 
+
+
+Case A:
+There are 13 options so that means for 2 cards that would be 13 * 13 = 169.
+
+Case B:
+That means that all the cards that have a combined value of 17.
+
+Case C:
+This means that all the cards with a combined value of 7.
+
+
+
+Challenge 3
+
+A.
+That would be 6 options so that should be 1/6.
+
+B.
+The highest score you can get is 6.
+
+C.
+The player has 6 options to throw.
+The other player has also 6.
+There are 36 possible options to throw combined.
+6 of those are ties and the other 30 are divided by 2.
+That means that Player A has 15/36 change of winning the coin.
+
+D.
+There is a range from 1 to 5 of the possible options.
+
+
+Case A:
+Player A has thrown the dice but we don't know what Player B did.
+
+Case B:
+It can be if both players throw 2 and 1 or both throw a 2.
+
+Case C:
+Player A plays with a 5 or 6 and Player B plays with a 1 or 2.
+There is a difference of 2 or more between the dice throws.
+If they both throw the same number.
