@@ -20,39 +20,35 @@ https://www.statisticshowto.com/probability-and-statistics/expected-value/
 
 ## Challenge 2: What is the "problem" in science with p-values?
 
-How do statistics so often lead scientists to deny differences that those not educated in statistics can plainly see? 
+p-Value is a statistics term that is used to define the significance between two values in relation to the null hypothesis which states that one variable doesn’t affect the other. By convention, if p < 0,05, it means the probability that the null hypothesis is true is less than 5%. We can then reject it and accept the fact that these two variables influenced each other.
+ 
+But this term is dividing the scientific community about its accuracy when analysing data.
+And that’s because it’s an objective and arbitrary term which lead to a yes or no decision. The problem becomes human and cognitive more than statistical. The accuracy of some analysis cannot be only determined through the p-value. Whatever its result, caution is needed as background is important and only looking at the p-value often lead to ignoring it.
+ 
+Instead of evaluating it as a significative result of compatibility, p-value should be only use as an indicator of more or less compatibility. Acknowledging the uncertainty of this statistical value will keep us from making false declarations of ‘no relation’ or minimalizing it.
+ 
+It is important to give more credit to the parameters of a study. Even though the p-value can be useful, we should no longer use it as a significant tool.
 
-we should never conclude there is ‘no difference’ or ‘no association’ just because a P value is larger than a threshold such as 0.05 or, equivalently, because a confidence interval includes zero. Neither should we conclude that two studies conflict because one had a statistically significant result and the other did not. These errors waste research efforts and misinform policy decisions.
-
-Surveys of hundreds of articles have found that statistically non-significant results are interpreted as indicating ‘no difference’ or ‘no effect’ in around half 
-
-https://media.nature.com/lw800/magazine-assets/d41586-019-00857-9/d41586-019-00857-9_16551624.jpg
-spread of misuse on p-value
-
-We are not calling for a ban on P values. Nor are we saying they cannot be used as a decision criterion in certain specialized applications (such as determining whether a manufacturing process meets some quality-control standard).  we are calling for a stop to the use of P values in the conventional, dichotomous way — to decide whether a result refutes or supports a scientific hypothesis5.
-
-The trouble is human and cognitive more than it is statistical: bucketing results into ‘statistically significant’ and ‘statistically non-significant’ makes people think that the items assigned in that way are categorically different
-
-Unfortunately, the false belief that crossing the threshold of statistical significance is enough to show that a result is ‘real’ has led scientists and journal editors to privilege such results, thereby distorting the literature.
-
-In fact, random variation alone can easily lead to large disparities in P values, far beyond falling just to either side of the 0.05 threshold. Whether a P value is small or large, caution is warranted.
-
-We must learn to embrace uncertainty.
-
-An interval that contains the null value will often also contain non-null values of high practical importance. That said, if you deem all of the values inside the interval to be practically unimportant, you might then be able to say something like ‘our results are most compatible with no important effect’.
-
-When talking about compatibility intervals, bear in mind four things. First, just because the interval gives the values most compatible with the data, given the assumptions, it doesn’t mean values outside it are incompatible; they are just less compatible.
-Second, not all values inside are equally compatible with the data, given the assumptions. The point estimate is the most compatible, and values near it are more compatible than those near the limits.Interpreting the point estimate, while acknowledging its uncertainty, will keep you from making false declarations of ‘no difference’, and from making overconfident claims.
-Third, like the 0.05 threshold from which it came, the default 95% used to compute intervals is itself an arbitrary convention. It is based on the false idea that there is a 95% chance that the computed interval itself contains the true value, coupled with the vague feeling that this is a basis for a confident decision. A different level can be justified, depending on the application. 
-Last, and most important of all, be humble: compatibility assessments hinge on the correctness of the statistical assumptions used to compute the interval.
-
-Factors such as background evidence, study design, data quality and understanding of underlying mechanisms are often more important than statistical measures such as P values or intervals.
-
-The objection we hear most against retiring statistical significance is that it is needed to make yes-or-no decisions. But for the choices often required in regulatory, policy and business environments, decisions based on the costs, benefits and likelihoods of all potential consequences always beat those made based solely on statistical significance. Moreover, for decisions about whether to pursue a research idea further, there is no simple connection between a P value and the probable results of subsequent studies.
-
-People will spend less time with statistical software, and more time thinking.
-
-Although it will eliminate many bad practices, it could well introduce new ones. Thus, monitoring the literature for statistical abuses should be an ongoing priority for the scientific community. But eradicating categorization will help to halt overconfident claims, unwarranted declarations of ‘no difference’ and absurd statements about ‘replication failure’ when the results from the original and replication studies are highly compatible. 
-P values, intervals and other statistical measures all have their place, but it’s time for statistical significance to go.
 
 ## Challenge 3: Applying testing to a specific case: A/B testing.
+
+
+Traffic split here is 10-90% which means that only 10% of the users will access the test button. We first have to make sure that this tests last long enough to collect enough data and make sure our analysis will be an accurate prediction.
+We also have to remember when analysing our data that the results we will obtain come from a sample of user at a given time, which is part of a bigger population.
+
+The first parameter to look at would be a ‘clickbait rate’. Which means that it’s the number of times users clicked on the link, compared to the total number of users who had the version with the working button.
+
+But more than this, it would be necessary to know how long it took the users to click on the button since he landed on our webpage. That would help us determine the visibility of this new feature and if we compare it to the time spend by a user without this button to access the same games, it could be used as a performance indicator.
+
+Then, it would be necessary to see, for all the users who reached those specific game (with and without the button), if they actually played those games, and for how long? This would indicate the efficiency of the button. 
+Are people using the button randomly and then keep browsing, or is it actually effective and users using this link tend to play more games than the user without this new feature?
+
+
+As the A/B test here is split unevenly, it could be necessary to take a sample out of the users without the button about the same size as the number of users who had access to the test button. Some statistical tests can be done to determine the accuracy of the sampling.
+
+Using those tools, we could then determine if the difference on the average time spend on the website playing games has been improved thanks to the button, or if its addition has no significant impact.
+
+Here, p-value can be useful, but as seen before, bear in mind that other parameters on the website can interfere with our results and should not be used as the only indicator.
+
+
+A final step, if the first A/B test is relevant, would be to start this A/B test a second time, but by increasing the traffic on the new button, maybe above 50% and then compare to the first data and determine if we obtain the same results or not using a R&R tool (Repetition & Repetitivity).
