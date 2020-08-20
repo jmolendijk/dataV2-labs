@@ -1,0 +1,457 @@
+# To add a new cell, type '# %%'
+# To add a new markdown cell, type '# %% [markdown]'
+# %% [markdown]
+# ## Before you start:
+# 
+# - Read the README.md file
+# - Comment as much as you can
+# - Happy learning!
+
+# %%
+#Bert Van Strydonck - DAAMS0720
+
+# %% [markdown]
+# # Descriptive Statistics Review
+# %% [markdown]
+# ## Context
+# %% [markdown]
+# ![img](./diamonds.jpg)
+# %% [markdown]
+# In this lab we are going to work with data to understand the characteristics of a diamond that are most likely to influence its price. In this first part of the lab, we will explore and clean our data. 
+# 
+# The dataset we will be using is comprised of approximately 54k rows and 11 different columns. As always, a row represents a single observation (in this case a diamond) and each of the columns represent a different feature of a diamond.
+# 
+# The following codebook was provided together with the dataset to clarify what each column represents:
+# 
+# %% [markdown]
+# | Column  | Description  |
+# |---|---|
+# | Price  | Price in US dollars (326-18,823)  |
+# | Carat  | Weight of the diamond (0.2--5.01)  |
+# | Cut  | Quality of the cut (Fair, Good, Very Good, Premium, Ideal)  |
+# | Color  | Diamond colour, from J (worst) to D (best)  |
+# | Clarity  | A measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))   |
+# | x  | Length in mm (0--10.74)  |
+# | y  | Width in mm (0--58.9)  |
+# | z  | Depth in mm (0--31.8)  |
+# | Depth  | Total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43--79)  |
+# | Table  | Width of top of diamond relative to widest point (43--95)  |
+# %% [markdown]
+# ## Libraries
+# Pandas and numpy will be needed for the analysis of the data. Don't worry about the seaborn and matplotlib import at the moment, you will learn more about them next week, but we will be using some of their functionalities.
+
+# %%
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# %% [markdown]
+# First import the data from the .csv file provided and assign it to a variable named `diamonds` and drop the column with the index.
+
+# %%
+diamonds = pd.read_csv('/Users/bert/Desktop/dataV2-labs/module-2/M2-mini-project1/diamonds.csv').drop(['Unnamed: 0'], axis=1)
+
+#.drop(['Unnamed: 0'], axis=1) --> this remove the column with the index. 
+diamonds.head(10)
+
+# %% [markdown]
+# # 1. Taking the first look at the data.
+# Let's see how the data looks by using pandas methods like `head()`, `info()` and `describe()`. 
+# 
+# **First, use the `head` method.**
+
+# %%
+diamonds.head()
+
+# %% [markdown]
+# We can see the first 5 rows of the dataset using the `head` method. This by itself doesn't tell us much about the data that we have, but we can have a first look at the features (columns) and some of the values that each one takes.
+# 
+# **What do you see? Make some comments about the values you see in each column, comparing them with the codebook. Is that what you would expect for these variables?**
+
+# %%
+'''
+* We can see for each diamond the carat of the stone (= weight of the diamond) with min. (0.2 & max 5.01) --> here we have small diamonds
+* Here we can also see how's the cut of the diamond is? (5 index columns where Ideal is the best and Premium second best. and good is just average.) If we only look to these 5 we have pretty good quality of diamonds. 
+* The color is also important here we have 2 not so good qualities and 3 very good qualties just under the best quality. 
+    (J --> D) --> D is the best quality and J is the worst!
+* Clarity of these 5 stones is not so good if take a look to the codebook. We can say that those stones are average.  
+* Depth: 
+* Table: 
+* Price: price of a diamond depends on a combination of several things. (Carat, Cut, Color, Clarity, Depth and Table)
+* X: This represents the length of the diamond in mm of these 5 the range is between 3.89 and 4.34
+* Y: This represenets the width of the diamond in mm of these 5 the range is between 3.84 and 4.45
+* Z: This represents the depth of the diamond in mm of these 5 the range is between 2.31 and 2.75 
+
+Was I expect thse variables? 
+I would expect there was a larger difference in the price range. 
+I was also expecting to see a relation between the values  Y in comparison with Table but at first glance we don't see much. 
+I also thought that on the basis of 5 records, it was impossible to draw a conclusion. 
+
+'''
+
+# %% [markdown]
+# It is very important to know the amount of data we have, because everything will depend on that, from the quality of the analysis to the choice of our infrastracture.
+# 
+# **Check the shape of the data**
+
+# %%
+diamonds.shape
+
+# %% [markdown]
+# The `clarity` column is confusing because we are not diamond experts. Let's create a new column with a new scale that is more understandable for us.
+# 
+# **Create a new column with numbers from 0 to 7. The lowest would be 0 with value `I1` and the greatest 7 with value `IF`**
+
+# %%
+def clarity_label (row): 
+    if row['clarity'] == "I1": 
+        return 0 
+    if row['clarity'] == "SI2":
+        return 1
+    if row['clarity'] == "SI1":
+        return 2
+    if row['clarity'] == "VS2":
+        return 3
+    if row['clarity'] == "VS1":
+        return 4
+    if row['clarity'] == "VVS2":
+        return 5
+    if row['clarity'] == "VVS1":
+        return 6
+    if row['clarity'] == "IF":
+        return 7
+
+diamonds['clarity_scale'] = diamonds.apply(lambda row: clarity_label(row), axis=1)
+diamonds.head()
+
+#Comments: First I've made a function to specify every new variable. After I completed my function I used the 'Apply' method to the DataFrame and I used a lambda to iterate over all the rows. --> axis=1 means here in the apply function --> Apply function to each row. 
+#Source code I found on "Geeks for Geeks"
+
+# %% [markdown]
+# It makes sense to do the same with the `color` column.
+# 
+# **Do the same with values from 0 to 6. Read the codebook to see the match**
+
+# %%
+def color_label (row): 
+    if row['color'] == "J": 
+        return 0 
+    if row['color'] == "I":
+        return 1
+    if row['color'] == "H":
+        return 2
+    if row['color'] == "G":
+        return 3
+    if row['color'] == "F":
+        return 4
+    if row['color'] == "E":
+        return 5
+    if row['color'] == "D":
+        return 6
+
+diamonds['color_scale'] = diamonds.apply(lambda row: color_label(row), axis=1)
+diamonds.head()
+
+# %% [markdown]
+# With the `info` method, we can see the features of the dataset, and the amount of observations (rows) that have a non-null value and the types of the features. 
+# 
+# **Now use the `info` method and comparing with the shape, comment on what you see**
+
+# %%
+diamonds.info()
+
+
+# %%
+diamonds.shape
+
+
+# %%
+"""
+If we compare the info() method to shape() method we can see that number of rows identical and that is also what we expect. 
+"""
+
+# %% [markdown]
+# In the last line of the info output, you have some information about the types of the columns. As you know, it is a good idea to check if the types of each column is what you expect. If a column has the right type, we will be able to do all the operations that we want to do. 
+# 
+# For instance, if we have a column that is a `date` with a `string` format, we will have the data but we won't be able to do a simple operation, such as format the date the way that we would like.
+# 
+# Changing the data type to the one we needs can help us to solve a lot of problems in our data.
+# 
+# **Check the types of each column and comment if it matches with the expected**
+
+# %%
+#Here I change the datatype for a price because a price is not always an integer. 
+diamonds.astype({'price': 'float64'}).dtypes
+
+# %% [markdown]
+# # 2. A deeper look: checking the basic statistics.
+# 
+# The `describe` method gives us an overview of our data. From here we can see all the descriptive metrics for our variables.
+# 
+# **Use the `describe` method and comment on what you see**
+
+# %%
+diamonds.describe().transpose()
+
+
+# %%
+"""
+Here we see quick several statistical definitions.
+We see that the there is a high standard variation for the price? Is this the work due to outliners or are here other things playing arround? 
+ 
+So we can have a quick impression of the data. 
+"""
+
+# %% [markdown]
+# You have probably noticed that the columns x, y and z have a minimum value of 0. This means that there are one or more rows (or observations) in our dataset that are supposedly representing a diamond that has lenght, width or depth of 0. Considering that we're talking about a physical object, this is impossible!
+# 
+# Now let's proceed to check the rows that have a value of 0 in any of the x, y or z columns. By doing this we want to check if the data we are missing can be obtained using the data that we do have.
+# 
+# **Check the columns with `x`, `y` and `z` with value 0 in all of them and comment what you see**
+
+# %%
+x_null = diamonds[diamonds['x'] == 0]
+y_null = diamonds[diamonds['y'] == 0]
+z_null = diamonds[diamonds['z'] == 0]
+z_null
+
+#I have used count to count the different sets of the missing values. 
+# x = 8 --> Everywhere where x == 0 z is also == 0 but there is one value where y has value
+# y = 7 --> Everywhere where y == 0 also x & z == 0 
+# z = 20 --> sometimes there is a value for x & y where z is equal to 0
+
+# %% [markdown]
+# As you can see, we have 20 rows that have a value of 0 in some or all the aforementioned columns.
+# Most of them (12) are missing the z value, which we can obtain using the columns depth, x and y. 
+# 
+# 20 rows with issues represent just 0.03% of our data (20 out of 53940) so it wouldn't be a big deal to remove them. Still, lets try to keep all the data we have. 
+# 
+# For those 12 rows, we will create a function that applies the formula given in the codebook and get the value of z. We will drop the other rows (8), since they are missing all 3 values or 2 of them.
+# 
+# **Create a function named `calculate_z` that applies the function in the codebook to one single row you give to the function**
+
+# %%
+def calculate_z (row):
+    if row['z'] > 0: 
+        return row['z']
+    elif row['z'] == 0 and row['x'] != 0 and row['y'] != 0:
+        som = row['x']+row['y'] 
+        return row['depth']*som/200
+
+
+# %% [markdown]
+# **Apply it just to the rows with incorrect values**
+
+# %%
+diamonds['z'] = diamonds.apply(lambda row: calculate_z(row), axis=1)
+diamonds.head(50)
+
+# %% [markdown]
+# If we leave the other 8 values as they are, it would negatively affect our analysis, because these are data that do not make logical sense. Therefore it is better to consider those values as NaN values, since they are probably the result of a mistake or error during process of measuring and storing these values in a dataset.
+# 
+# To replace them we can use the pandas .replace() method and np.NaN.
+# 
+# **Replace the zero values in the `z` column for a NaN**
+
+# %%
+diamonds['z'].isnull().sum()
+
+#This is the formula to check if there are any NaN values an as you can see, we have 8
+#Thanks to my previous formula I don't need to change anything. 
+
+
+# %%
+def calculate_x (row):
+    if row['x'] > 0: 
+        return row['x']
+
+
+diamonds['x'] = diamonds.apply(lambda row: calculate_x(row), axis=1)
+
+#That's a function I made for return NaN values instead of "0"
+
+
+# %%
+def calculate_y (row):
+    if row['y'] > 0: 
+        return row['y']
+
+diamonds['y'] = diamonds.apply(lambda row: calculate_y(row), axis=1)
+
+#That's a function I made for return NaN values instead of "0"
+
+# %% [markdown]
+# ----
+# # Bonus: check the new z values
+# Since we need to be 100% sure of our data, let's create a function that validates our z. To do so, we will use the same formula, but this time we will calculate the value of depth with the new value assigned to z.
+# 
+# **Create a function named `validate_z` that compares the `z`  in cells above with the one thrown by the formula and run it with the rows you changed in the cells above**
+
+# %%
+diamonds.describe().transpose()
+
+
+# %%
+test = diamonds[diamonds['z'] > 20 ]
+test
+#This was just a random test of me. 
+
+# %% [markdown]
+# Let's check the data again with the `describe()` method.
+# %% [markdown]
+# The minimum value for x, y and z should now be a positive number, as it should be for the physical measurements of an object.
+# %% [markdown]
+# Let's finish by checking for NaN values in the data. Since we introduced them ourselves using 'replace', we will surely find some, but there may be more that are unrelated to the x, y and z columns. Checking NaNs is a fundamental part of data cleaning and it's always better to do this kind of operations before proceeding with analysis.
+# 
+# **Check how many NaNs do you have, comment what you would do with those values, and then do so**
+
+# %%
+check_nan = diamonds.isnull().sum()
+check_nan
+
+
+# %%
+#Here we see that there are 8 NaN value in the x & z column and 7 in the y-column. 
+#I drop those columns because I need to calculate with those mayby... 
+
+diamonds2 = diamonds[diamonds['x'].notnull()]
+check_nan = diamonds2.isnull().sum()
+check_nan
+len(diamonds2)
+
+# %% [markdown]
+# # 3. Checking for outliers
+# Now we are going to revisit the summary table to check for outliers.
+# 
+# **Use the `describe` method again and comment on what you see. After that, check if you have any outliers** 
+
+# %%
+diamonds2.describe().transpose()
+
+
+# %%
+#We see that the count has changed --> there is a decrease of 8 rows but that is because we drop the NaN values. 
+#Min in x, y, z is not 0 anymore. 
+#Price label has a very large standard variation. 
+
+# %% [markdown]
+# To manage these outliers, we are going to filter our DataFrame, we're going to take all the values that have a price higher than the 75th percentile.
+# 
+# **Look for that quantile and filter the dataframe to clearly see the outliers. What do you think?**
+
+# %%
+quantile_75 = diamonds2['price'].quantile(.75)
+diamonds_outliner = diamonds2[diamonds['price']> quantile_75]
+diamonds_outliner
+#Here we see that there are more than 13.481 prices above our 75 percentile.
+
+# %% [markdown]
+# Our dataset is really big and the outliers are really far apart from the rest of the values. To see this more clearly we will use a boxplot, which plots the median, 25th and 75th quartile, the maximum and minimum, as well as any outliers.
+
+# %%
+#Run this code
+fig, ax = plt.subplots(1,2, figsize=(10, 5))
+sns.boxplot(y=diamonds2.y, ax=ax[0])
+sns.boxplot(y=diamonds2.z, ax=ax[1])
+plt.subplots_adjust(wspace=0.5)
+
+# %% [markdown]
+# Now we can see that all the values are within an acceptable range, but we have 2 big outliers in y and 1 in z. Now we know that our max values for y should be around 10 and the values for z should be around 6, so let's filter our dataset to find values higher than 10 in it.
+# 
+
+# %%
+diamonds2_filter = diamonds2[(diamonds['z'] > 10) ]
+diamonds2_filter
+
+# %% [markdown]
+# Now that we have found the outlier, let's use the function we defined earlier to correct this value. First, we need to change the value to 0 (because that's how we defined the function before) and then we will apply it.
+# 
+# **Apply `calculate_z` for the row with the outlier**
+
+# %%
+diamonds2.loc[48410,'z']=0
+
+diamonds2['z'] = diamonds2.apply(lambda row: calculate_z(row), axis=1)
+
+# %% [markdown]
+# Let's check if we actually corrected the outlier.
+
+# %%
+diamonds2.loc[48410]
+
+# %% [markdown]
+# Cool! Now let's validate our new `z`. We will check if we obtain the same value of depth using our validate function. If the formula applies, this means could approximate the real value of `z`.
+# 
+# **Apply `validate_z` to the row used earlier**
+
+# %%
+#your code here
+
+# %% [markdown]
+# Now let's do the same for `y`. First, let's filter the DataFrame to find the outliers. We said that the maximum values should be around 10, so let's check what are the values above 10.
+# 
+# **Check the values greater than 10 in the `y` column** 
+
+# %%
+diamonds2_filter_y = diamonds2[(diamonds['y'] > 10) ]
+diamonds2_filter_y
+
+
+# %%
+diamonds2.loc[24067,'y']=0
+diamonds2.loc[49189,'y']=0
+
+# %% [markdown]
+# We can clearly see that the 31.8 in row 49189 is an outlier for the y value. Also, we can see that the 58.9 value for `y` in row 24067 is actually its depth, so it was a mistake when they introduced the data. Let's create a function to fix these outliers.
+# 
+# **Create a function named `calculate_y` to calculate `y` using `z` and `x` the same way you did above**
+
+# %%
+def calculate_y2 (row):
+    if row['y'] > 0: 
+        return row['y']
+    elif row['y'] == 0 and row['x'] != 0 and row['z'] != 0:
+        num1 = row['z']*200
+        num2 = row['x']*row['depth']
+        num3 = num1 - num2 
+        num4 = num3/row['depth']
+        return num4
+
+diamonds2['y'] = diamonds2.apply(lambda row: calculate_y2(row), axis=1)
+
+
+# %%
+var_one = diamonds2.loc[24067,'y']
+var_two = diamonds2.loc[49189,'y']
+
+# %% [markdown]
+# We will check the rows that had an outlier in `y`, to check that the values were changed.
+# 
+# **Check those rows (also validating with your function) and comment what you see**
+# %% [markdown]
+# Now that we have corrected or dropped all of our outliers, lets plot another box plot to double check.
+
+# %%
+#Run this code
+fig, ax = plt.subplots(1,2, figsize=(10, 5))
+sns.boxplot(y=diamonds2.y, ax=ax[0])
+sns.boxplot(y=diamonds2.z, ax=ax[1])
+plt.subplots_adjust(wspace=0.5)
+
+# %% [markdown]
+# **What do you think? Are these values more reasonable?**
+# 
+
+# %%
+#Indeed it make more sense and the readability is better than in the previous. 
+#We can see more clear through the dataset and se better the distribution. 
+#Personally I would choose for another boxplot that have better readability. (Pxplot)
+
+# %% [markdown]
+# **Once you are happy with your cleaning, save the cleaned data and continue to csv. Your new csv should be named ``diamonds_clean``**
+
+# %%
+#diamonnds2 = diamonds2.to_csv('/Users/bert/Desktop/dataV2-labs/module-2/M2-mini-project1/diamonds_clean_v1.csv', index=False)
+
+
