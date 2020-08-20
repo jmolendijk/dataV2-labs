@@ -29,6 +29,8 @@ Instead of evaluating it as a significative result of compatibility, p-value sho
  
 It is important to give more credit to the parameters of a study. Even though the p-value can be useful, we should no longer use it as a significant tool.
 
+### Sources
+https://www.simplypsychology.org/p-value.html
 
 ## Challenge 3: Applying testing to a specific case: A/B testing.
 
