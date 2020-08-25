@@ -1,0 +1,6 @@
+# LAB Intro to BI and Tableau
+
+**Sarah Busson**
+
+Link :
+https://public.tableau.com/profile/sarah.busson#!/vizhome/LAB_Retail_SB/TotalRetailSalesbyYearQuarter
