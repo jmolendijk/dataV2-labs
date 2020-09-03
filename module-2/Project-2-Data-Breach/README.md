@@ -1,13 +1,13 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
-# Title of Your Project
-*[Nelly Cornejo]*
+# FRANCE GDPR &  Data Breaches
 
-*[Data Analytics, AMST 2020]*
+*Nelly Cornejo*
+
+*Data Analytics, Amsterdam 2020*
 
 ## Content
 - [Project Description](#project-description)
-- [Rules](#rules)
 - [Workflow](#workflow)
 - [Organization](#organization)
 - [Links](#links)
@@ -28,13 +28,21 @@ If the data breach concern sensitive data it is more likely for me to be notifie
 
 ## Workflow
 Formulate main question to answer
+
 Formumlate hypothesis
+
 Find data
+
 Clean data
+
 Store clean data in a .csv file and a MySQL Database
+
 Create and test the hypothesis
+
 Formulate conclusions
+
 Summarize key findings 
+
 Create presentation
 
 
@@ -52,5 +60,4 @@ README
 ## Links 
 
 [Repository](https://github.com/NellyCR/dataV2-labs/tree/master/module-2/Project-2-Data-Breach )  
-[Google Slides](https://slides.com/)  
 [French Open Data](https://www.data.gouv.fr/fr/datasets/notifications-a-la-cnil-de-violations-de-donnees-a-caractere-personnel/)  
