@@ -12,52 +12,58 @@
 - [Organization](#organization)
 - [Links](#links)
 
-## Project Description
-Title: GDPR and data breaches in France. 
+## Description
 
-The main focus of the project is to analyse the data breaches reported in France since the application of GDPR in May 2018. 
+The project is an analysis of the data breaches reported in France since the application of GDPR in May 2018. 
 
-The objective is:
+## Objective
 
 1.Find answers to the question : 
 How likely I am to be notified after an incident concerning my personal data has been reported ? 
 
 2.Get insights about the hypothesis : 
-If the data breach concern sensitive data it is more likely for me to be notified. 
+If the data breach is related to sensitive data it is more likely for me to be notified. 
 
 
 ## Workflow
-Formulate main question to answer
 
-Formumlate hypothesis
+✓ Formulate main question to answer
 
-Find data
+✓ Formumlate hypothesis/assumptions
 
-Clean data
+✓ Find data
 
-Store clean data in a .csv file and a MySQL Database
+✓ Clean data
 
-Create and test the hypothesis
+✓ Store clean data in a .csv file and a MySQL Database
 
-Formulate conclusions
+✓ Create and test the hypothesis
 
-Summarize key findings 
+✓ Summarize key findings 
 
-Create presentation
+✓ Formulate conclusions
+
+✓ Create presentation
 
 
-## Organization
+## Repository organization:
 
-Repository organization:
 Datasets files
-Data cleaning files
+
+Data cleaning files (Python,SQL)
+
 Web scraping files
+
 Data cleaned files
+
 Data analysis files
+
 Hypothesis Files
+
 README 
 
 ## Links 
 
-[Repository](https://github.com/NellyCR/dataV2-labs/tree/master/module-2/Project-2-Data-Breach )  
+[Repository](https://github.com/NellyCR/dataV2-labs/tree/master/module-2/Project-2-Data-Breach ) 
+[Google Salides](https://docs.google.com/presentation/d/1Hd7Wvah1LR8lSNC8redvbLkv9L7vedRujVgd3dzGl3g/edit?usp=sharing )  
 [French Open Data](https://www.data.gouv.fr/fr/datasets/notifications-a-la-cnil-de-violations-de-donnees-a-caractere-personnel/)  
