@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>CNIL_FINES</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>6257862091756137609</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYkAAgAEQAaACQAKQAyADcASQBMAFEA
+			UwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgAnQC9AMIAzwDR
+			ANMA2ADjAOwA9wD6AQUBDgETASAAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1079, 636}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT
+Country
+, Date
+, Fine_EUR
+, Controller
+, Type
+, Summary
+FROM cnil_gdpr_fines
+WHERE Country IN ('FRANCE');</string>
+			<key>table</key>
+			<string>cnil_gdpr_fines</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>237</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT
+Country
+, Date
+, Fine_EUR
+, Controller
+, Type
+, Summary
+FROM cnil_gdpr_fines
+WHERE Country IN ('FRANCE')</string>
+		<string>SELECT
+Country
+, Date
+, Fine_EUR
+, Controler
+, Type
+, Summary
+FROM cnil_gdpr_fines
+WHERE Country IN ('FRANCE')</string>
+		<string>SELECT *
+FROM cnil_gdpr_fines
+WHERE Country IN ('FRANCE')</string>
+		<string>SELECT *
+FROM cnil_gdpr_fines
+WHERE Country = FRANCE</string>
+		<string>CNIL_FINES</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv' 
+INTO CNIL_FINES</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv' 
+INTO DATABASE CNIL_FINES</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv' 
+INTO DATABASE CNIL_FINES 
+IGNORE 1 ROWS</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv' 
+INTO DATABASE CNIL_FINES 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv' 
+INTO TABLE CNIL_FINES 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv'  
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS</string>
+		<string>LOAD DATA INFILE '/Users/nelly/dataV2-labs/module-2/Project-2-Data-Breach/Clean_data/CNIL_data_breaches_cleaned.csv' 
+INTO TABLE CNIL_FILES 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS</string>
+		<string>CREATE DATABASE CNIL_FINES</string>
+		<string>CREATE TABLE publications.most_profiting_authors_nelly
+SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id</string>
+		<string># Create table with 2 columns: au_id - Author ID  &amp; profits - The profits of the author aggregating the advances and royalties
+
+CREATE TABLE most_profiting_authors_nelly
+SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id</string>
+		<string># Create table with 2 columns: au_id - Author ID  &amp; profits - The profits of the author aggregating the advances and royalties
+
+SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id</string>
+		<string>SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id
+ORDER BY total_profit ASC</string>
+		<string># Create table with 2 columns: au_id - Author ID  &amp; profits - The profits of the author aggregating the advances and royalties
+
+SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id
+ORDER BY total_profit DESC</string>
+		<string># Create table with 2 columns: au_id - Author ID  &amp; profits - The profits of the author aggregating the advances and royalties
+
+SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id
+ORDER BY total_profit ASC</string>
+		<string>SELECT 
+authors.au_id,  
+SUM(titles.advance * titleauthor.royaltyper / 100) + SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100)  as total_profit
+
+FROM authors
+JOIN titleauthor on authors.au_id = titleauthor.au_id
+JOIN titles on titleauthor.title_id = titles.title_id 
+JOIN sales on titles.title_id = sales.title_id
+GROUP BY authors.au_id</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.19</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
