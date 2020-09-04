@@ -65,5 +65,7 @@ README
 ## Links 
 
 [Repository](https://github.com/NellyCR/dataV2-labs/tree/master/module-2/Project-2-Data-Breach ) 
-[Google Salides](https://docs.google.com/presentation/d/1Hd7Wvah1LR8lSNC8redvbLkv9L7vedRujVgd3dzGl3g/edit?usp=sharing )  
+
+[Google Slides](https://docs.google.com/presentation/d/1Hd7Wvah1LR8lSNC8redvbLkv9L7vedRujVgd3dzGl3g/edit?usp=sharing ) 
+ 
 [French Open Data](https://www.data.gouv.fr/fr/datasets/notifications-a-la-cnil-de-violations-de-donnees-a-caractere-personnel/)  
