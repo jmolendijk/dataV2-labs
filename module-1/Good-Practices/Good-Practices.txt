@@ -4,7 +4,7 @@ I commit to uphold the folliwing Good Practices during the bootcamp:
    - use lowercase for naming styles
    - do not use the characters 'l' (lowercase letter el), 
      'O' (uppercase letter oh), or 'I' (uppercase letter eye) as single character variable names
-   - 
+   - avoid using global variables, e.g. inside a function
 
 2. Function Naming
    - Function names should be lowercase, with words separated by underscores.
