@@ -1,0 +1,13 @@
+I find the following good practices important to be followed throughout the duration of the bootcamp:
+
+1. The use of lowercase when writting variable names
+
+2. The use of lowercase and underscores to separate words in the name of functions
+
+3. Libraries should be imported one at the time, on top, and after any module comments and doc strings and before module globals and constants
+
+4.The use of comments should be done "wisely", making the code easier for others to understand and use (but avoiding 'obvious' inline  comments)
+5. Indentation rules should also be thoughtfully followed.
+6. Nested loops are to be used with caution to avoid adding unnecessary complexity to the code.
+
+7.Git commit comments should be short and meaningful allowing the users to be aware of the changes made.
