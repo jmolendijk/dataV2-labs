@@ -1,0 +1,10 @@
+my good practices
+
+importance of variable naming & function naming
+understanding why and what you are doing
+
+adding comments, always knowing what you have done / changed (also for other people who might read it)
+
+always respect the zen python rules
+
+understand how to work with libraries 
