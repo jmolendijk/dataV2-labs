@@ -1,0 +1,10 @@
+Variable naming: It should always be clear by the name of the variable what it stands for. See example of variance & st dev earlier in class.
+g = k**2 is less clear than variance = stdev**2
+
+Function naming: It should be clear for what the function stands for through the name of the function.
+
+Libraries: There should always be a comment next to the import of a library so that everyone knows why this library was imported.
+
+Git: In git there can be conflicts when multiple people are working on the same project at the same time. So correct comments, forks & branches must be created in order to avoid confusion.
+
+Code layout: Always respect the rules of ZEN of Python. This ensures the continuity of the code and makes life easier for your colleagues.
