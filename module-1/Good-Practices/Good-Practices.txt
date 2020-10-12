@@ -1,0 +1,38 @@
+I commit to uphold the folliwing Good Practices during the bootcamp:
+
+1. Varibale namings
+   - use lowercase for naming styles
+   - do not use the characters 'l' (lowercase letter el), 
+     'O' (uppercase letter oh), or 'I' (uppercase letter eye) as single character variable names
+   - 
+
+2. Function Naming
+   - Function names should be lowercase, with words separated by underscores.
+     Variable names follow the same convention as function names
+
+
+3. Libraries
+   - imports are always put at the top of the file, just after module comments and docstrings, 
+     and before module globals and constants. 
+   - import libraries one at a time, unless they are part of from...import statement, for example:
+     	import os
+     	import sys
+     	from subprocess import Popen, PIPE
+     and not 
+	import os, sys 
+
+4. Community conventions
+   - comment each block of code, e.g 'create a function that does xxxx'
+   - use inline comments sparingly
+   - write docstrings for all public modules, functions, classes, and methods 
+   - follow the identation rules: https://www.python.org/dev/peps/pep-0008/#indentation
+   - avoid nested loops
+   - no extraneous white spaces https://www.python.org/dev/peps/pep-0008/#pet-peeves
+   - limit length of a line to 79 characters https://www.python.org/dev/peps/pep-0008/#maximum-line-length
+
+
+5. Other (git. )
+   - write meaningful brief comment in a git commit, for example: 
+     $ git comment -m 'this must be a brief meaningful comment'
+   - lower cases short descriptive branch names
+ 
