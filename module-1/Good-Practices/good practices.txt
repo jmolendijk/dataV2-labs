@@ -1,0 +1,45 @@
+1) Indentation
+Use 4 spaces per indentation level.
+
+- I encountered errors while using the conditional loops in my prework and would work on improving this aspect of my coding.
+
+
+Source File Encoding
+
+2)Imports
+
+Imports should usually be on separate lines:
+
+Imports are always put at the top of the file, just after any module comments and docstrings, and before module globals and constants.
+
+Imports should be grouped in the following order:
+
+Standard library imports.
+Related third party imports.
+Local application/library specific imports.
+You should put a blank line between each group of imports.
+
+- Imports was an important part of the coding I have done so far and I would work on it. 
+
+3)String Quotes
+
+In Python, single-quoted strings and double-quoted strings are the same. This PEP does not make a recommendation for this. Pick a rule and stick to it. When a string contains single or double quote characters, however, use the other one to avoid backslashes in the string. It improves readability.
+
+4) Pet Peeves
+Avoid extraneous whitespace in the following situations:
+
+Immediately inside parentheses, brackets or braces:
+
+- The number of errors in the code are significantly effected by the use of the correct syntax, spaces.
+
+5) Prescriptive: Naming Conventions
+Names to Avoid
+Never use the characters 'l' (lowercase letter el), 'O' (uppercase letter oh), or 'I' (uppercase letter eye) as single character variable names.
+
+In some fonts, these characters are indistinguishable from the numerals one and zero. When tempted to use 'l', use 'L' instead.
+
+6) Variable Annotations
+
+If an assignment has a right hand side, then the equality sign should have exactly one space on both sides:
+
+
