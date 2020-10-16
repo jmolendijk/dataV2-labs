@@ -48,4 +48,3 @@ Include links to your repository, slides and kanban board. Feel free to include 
 [Repository](https://github.com/IrynaHorova/dataV2-labs/tree/master/module-1/Mini-Project)  
 [Slides](https://github.com/IrynaHorova/dataV2-labs/blob/master/module-1/Mini-Project/Presentation.pptx)  
 [Trello](https://trello.com/en)  
-
