@@ -38,13 +38,10 @@ https://en.wikipedia.org/wiki/Mastermind_(board_game)
 - Test game
 
 ## Organization
-I did not user trello board on this occasion, and just user Jupyter for the flow of my project
-
-My repository file includes your-code wit code, README file and the rpesentation 
+My repository file includes your-code with code, README file and the presentation 
 
 ## Links
-Include links to your repository, slides and kanban board. Feel free to include any other links associated with your project.
 
 [Repository](https://github.com/IrynaHorova/dataV2-labs/tree/master/module-1/Mini-Project)  
 [Slides](https://github.com/IrynaHorova/dataV2-labs/blob/master/module-1/Mini-Project/Presentation.pptx)  
-[Trello](https://trello.com/en)  
+[Trello](https://trello.com/b/D5RUcQDk/mini-project-w1-ih)  
