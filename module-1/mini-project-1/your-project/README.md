@@ -57,4 +57,4 @@ Include links to your repository, slides and trello/kanban board. Feel free to i
 
 [Repository](https://github.com/AjiacoVic/dataV2-labs/edit/master/module-1/mini-project-1/your-project/README.md)  
 [Slides](https://docs.google.com/presentation/d/1XDVU8ITRsvm-uOhfzaFk6yjCHIvAcWrjzS5UJYFyeTU/edit#slide=id.p)  
-[Trello](hhttps://trello.com/b/IctPnoFa/project-1-build-your-own-game)  
+[Trello](https://trello.com/b/IctPnoFa/project-1-build-your-own-game)  
