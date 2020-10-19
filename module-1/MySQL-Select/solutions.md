@@ -3,7 +3,7 @@
 |au_id | au_lname | au_fname | title | pub_name
 |:---  |:---      |:---      |:---   |:---
 |213-46-8915	|Green	|Marjorie	|The Busy Executive's Database Guide	|Algodata Infosystems
-|409-56-7008	|Bennet	|Abraham	The Busy Executive's Database Guide	|Algodata Infosystems
+|409-56-7008	|Bennet	|Abraham	|The Busy Executive's Database Guide	|Algodata Infosystems
 |267-41-2394	|O'Leary	|Michael	|Cooking with Computers: Surreptitious Balance Sheets	|Algodata Infosystems
 |724-80-9391	|MacFeather	|Stearns	|Cooking with Computers: Surreptitious Balance Sheets	|Algodata Infosystems
 |213-46-8915	|Green	|Marjorie	|You Can Combat Computer Stress!	|New Moon Books
