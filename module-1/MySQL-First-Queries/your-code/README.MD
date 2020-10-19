@@ -63,7 +63,7 @@ Angry Birds
 
 **6. Find the top 10 apps best rated by users.**
 
-Top 10 aps order by id are:
+Top 10 randomly selected apps order by ratings :
 
 :) Sudoku +,
 King of Dragon Pass,
