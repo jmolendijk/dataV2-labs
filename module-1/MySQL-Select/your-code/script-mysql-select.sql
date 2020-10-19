@@ -51,7 +51,6 @@ limit 3;
 
 
 /*Challenge 4 - Best Selling Authors Ranking*/
-
 select a.au_id as Author_id
 		, a.au_lname as Last_name
         , a.au_fname as First_name
@@ -65,4 +64,3 @@ group by a.au_id
 		, a.au_lname
         , a.au_fname
 order by sum(s.qty) desc;
- 
