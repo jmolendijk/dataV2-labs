@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>publications</string>
+			<key>host</key>
+			<string>34.77.233.175</string>
+			<key>kcid</key>
+			<string>-3898884444665713806</string>
+			<key>name</key>
+			<string>34.77.233.175</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>student</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGtCwwZGhscHSEoLDA0OFUkbnVsbNMNDg8QFBhXTlMua2V5
+			c1pOUy5vYmplY3RzViRjbGFzc6MREhOAAoADgASjFRYXgAWABoAI
+			gAxUdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rpb25EZXRhaWxUeXBl
+			UHJpbWFyeUtleWVkRGV0YWlsc9MNDg8eHyCgoIAH0iIjJCVaJGNs
+			YXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmj
+			JCYnXE5TRGljdGlvbmFyeVhOU09iamVjdNIODykroSqACYAL0g8t
+			Li9ZTlMuc3RyaW5ngApVYXVfaWTSIiMxMl8QD05TTXV0YWJsZVN0
+			cmluZ6MxMydYTlNTdHJpbmfSIiM1Nl5OU011dGFibGVBcnJheaM1
+			NydXTlNBcnJhedIiIyY5oiYnAAgAEQAaACQAKQAyADcASQBMAFEA
+			UwBhAGcAbgB2AIEAiACMAI4AkACSAJYAmACaAJwAngCjAKgArQDW
+			AN0A3gDfAOEA5gDxAPoBEAEUASEBKgEvATEBMwE1AToBRAFGAUwB
+			UQFjAWcBcAF1AYQBiAGQAZUAAAAAAAACAQAAAAAAAAA6AAAAAAAA
+			AAAAAAAAAAABmA==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1088.5, 767}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id
+INNER JOIN titles t on ta.title_id = t.title_id
+INNER JOIN publishers p on t.pub_id = p.pub_id;
+
+
+
+select count(*) from titleauthor</string>
+			<key>table</key>
+			<string>authors</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>352.5</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id
+INNER JOIN titles t on ta.title_id = t.title_id
+INNER JOIN publishers p on t.pub_id = p.pub_id</string>
+		<string>select count(*) from titleauthor</string>
+		<string>select count(*) from titleauthors</string>
+		<string>select count(au_id) from authors</string>
+		<string>select au_id count(*) from authors</string>
+		<string>select count(au_id) from authos</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname as "FIRST NAME", t.title as TITLE, p.pub_name as PUBLISHER
+from authors a
+inner join titleauthor ta on a.au_id=ta.au_id
+inner join titles t on ta.title_id=t.title_id
+inner join publishers p on t.pub_id=p.pub_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id
+INNER JOIN titles t on ta.title_id = t.title_id
+INNER JOIN publisher p on t.pub_id = p.pub_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id
+INNER JOIN titles t on ta.title_id = t.title_id
+INNER JOIN publisher p on p.pub_id = t.pub_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME" 
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME", 
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_fname AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_first_name AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta on a.au_id = ta.au_id</string>
+		<string>select a.au_id as "AUTHOR ID", a.au_lname as "LAST NAME", a.au_first_name AS "FIRST NAME", t.title AS "TITLE", p.pub_name as "PUBLISHER"
+from authors a
+INNER JOIN titleauthor ta
+on a.au_id = ta.au_id</string>
+		<string>select price from app
+ group by price
+ order by sum(user_rating) desc
+ limit 10</string>
+		<string>select price from app
+ group by price
+ order by users_rating desc
+ limit 10</string>
+		<string>select price from app
+ group by price
+ order by user_rating desc
+ limit 10</string>
+		<string>select avg( price) from app</string>
+		<string>select avg(distinct price) from app</string>
+		<string>select price from app
+ group by price</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.25-google</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

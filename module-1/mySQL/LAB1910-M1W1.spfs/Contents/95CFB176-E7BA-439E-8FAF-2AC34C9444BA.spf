@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>publications</string>
+			<key>host</key>
+			<string>34.77.233.175</string>
+			<key>kcid</key>
+			<string>-3898884444665713806</string>
+			<key>name</key>
+			<string>34.77.233.175</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>student</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYkAAgAEQAaACQAKQAyADcASQBMAFEA
+			UwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgAnQC9AMIAzwDR
+			ANMA2ADjAOwA9wD6AQUBDgETASAAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1088.5, 791}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>select * from app;
+
+select count(*) from app;
+
+/* 1.
+What are the different genres?
+
+Book
+Business
+Catalogs
+Education
+Entertainment
+Finance
+Food &amp; Drink
+Games
+Health &amp; Fitness
+Lifestyle
+Medical
+Music
+Navigation
+News
+Photo &amp; Video
+Productivity
+Reference
+Shopping
+Social Networking
+Sports
+Travel
+Utilities
+Weather
+
+*/
+
+select prime_genre from app
+group by prime_genre;
+
+/*
+
+2. Which is the genre with the most apps rated?
+
+	Games
+	
+*/
+
+select prime_genre from app
+group by prime_genre
+order by sum(rating_count_tot) desc;
+
+/*
+3. Which is the genre with most apps?
+
+	Games
+	
+*/
+
+select prime_genre, count(*) as id
+from app
+group by prime_genre
+order by id desc;
+
+/*
+4. Which is the one with least?
+
+	Catalogs
+	
+*/
+
+select prime_genre, count(*) as id
+from app
+group by prime_genre
+order by id asc;
+
+/*
+
+5. Find the top 10 apps most rated.
+
+Facebook
+Instagram
+Clash of Clans
+Temple Run
+Pandora - Music &amp; Radio
+Pinterest
+Bible
+Candy Crush Saga
+Spotify Music
+Angry Birds
+
+*/
+
+select track_name from app
+order by rating_count_tot desc
+limit 10;
+
+/*
+6. Find the top 10 apps best rated by users.
+
+:) Sudoku +
+King of Dragon Pass
+TurboScan��� Pro - document &amp; receipt scanner: scan multiple pages and photos to PDF
+Plants vs. Zombies
+Learn to Speak Spanish Fast With MosaLingua
+Plants vs. Zombies HD
+The Photographer's Ephemeris
+���Sudoku +
+Flashlight ���
+Infinity Blade
+
+*/
+
+select track_name from app
+order by user_rating desc
+limit 10;
+
+
+/*
+
+7. Take a look at the data you retrieved in question 5. Give some insights.
+
+I had a look at the categories as I find the link between this data and the most rated app is relevant, here are my findings:
+
+	- Facebook is the most rated social networking app.
+	- Instagram is the most rated photo &amp; video app.
+	- Clash of clans is the most rated game app.
+	- Music is the most rated photo &amp; video app.
+	- Bible is the most rated reference app.
+*/
+
+select track_name, prime_genre from app
+order by rating_count_tot desc
+limit 10;
+
+/*
+
+8. Take a look at the data you retrieved in question 6. Give some insights.
+
+:) Sudoku + is the best rated app.
+
+I've also looked at the number of users' votes  as I find the link between this data and the best rated app is relevant, here are my findings:
+
+	- Learn to Speak Spanish Fast With MosaLingua only has 9 votes.
+
+	- Plants vs. Zombies has the most votes within the best rated apps.
+
+*/
+
+select track_name, rating_count_tot, prime_genre from app
+order by user_rating desc
+limit 10;
+
+/*
+
+
+9. Now compare the data from questions 5 and 6. What do you see?
+
+ 	- None of the most rated apps is included in the best rated apps and inversely.
+ 
+ 	- The genres are more diverse in the most rated apps. 
+
+*/
+
+/*
+
+10. How could you take the top 3 regarding both user ratings and number of votes?
+
+*/
+
+select track_name, user_rating, rating_count_tot from app
+order by user_rating desc, rating_count_tot desc 
+limit 3;
+
+/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters I find relevant to assess whether people cares about the price of the apps are:
+	- the rating_count_tot which involves that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps.
+	
+We see that the 10 most rated apps' prices are under 10€, and that these most rated apps' prices are under the mean of the prices' categories (36.934722222222234).
+
+Additionally, we see that the 10 best rated apps' prices are under 10€, and that these best rated apps' prices app are under the mean of the prices' categories (36.934722222222234).
+
+I would conclude that people cares about the price, knowing that the prices of the best rated and the most rated apps are under 10€ which could qualify as being affordable and, particularily, that these prices are under the  mean of the prices' categories (36.934722222222234). */
+
+ select price from app
+ group by price
+ order by sum(rating_count_tot) desc
+ limit 10;
+ 
+ select avg( price) from app;
+ 
+ select avg(distinct price) from app;
+ 
+ select price from app
+ group by price
+ order by sum(user_rating) desc
+ limit 10;
+ 
+ 
+ 
+
+
+
+
+</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>352.5</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>select price from app
+ group by price
+ order by sum(user_rating) desc
+ limit 10</string>
+		<string>select price from app
+ group by price
+ order by users_rating desc
+ limit 10</string>
+		<string>select price from app
+ group by price
+ order by user_rating desc
+ limit 10</string>
+		<string>select avg( price) from app</string>
+		<string>select avg(distinct price) from app</string>
+		<string>select price from app
+ group by price</string>
+		<string>select price from app
+ group by price
+ avg(price)</string>
+		<string>select price 
+ group by price
+ avg(price) from app</string>
+		<string>select price 
+ group by prices
+ avg(price) from app</string>
+		<string>select avg(price) from app</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+	
+We see that the most rated app are the 10 most rated app are under 10€. Although, know 
+*/
+
+ select price from app
+ group by price
+ order by sum(rating_count_tot) desc
+ limit 10</string>
+		<string>select price, avg(price) as avgprice
+ from app</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+	
+We see that the most rated app are thz
+*/
+
+ select price from app
+ group by price
+ order by sum(rating_count_tot) desc
+ limit 10</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select price from app
+ group by price
+ order by sum(rating_count_tot) desc</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select price, rating_count_tot from app
+ group by price
+ order by sum(rating_count_tot) desc</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select price, rating_count_tot from app
+ group by price
+ order by price desc</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select price, rating_count_tot from app
+ order by price desc</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select track_name, price, user_rating, rating_count_tot from app
+ order by user_rating desc, price desc</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select track_name, price, user_rating, rating_count_tot from app
+ order by price desc, user_rating desc</string>
+		<string>/*
+
+11. Do people care about the price of an app? Do some queries, comment why are you doing them and the results you retrieve. What is your conclusion?
+
+The parameters to assess whether people cares about the price of the app are:
+	- the rating_count_tot which involve that an app was dowload many times and that people actually took the time to rate it;
+	- the user_rating meaning that people actually liked the apps
+*/
+
+ select track_name, price, user_rating, rating_count_tot from app
+ order by price desc</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.25-google</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
