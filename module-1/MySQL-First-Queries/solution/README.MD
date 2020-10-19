@@ -7,78 +7,86 @@ Please, connect to the Data Bootcamp Google Database using the credentials provi
 **1. What are the different genres?**
 
 There are these genres in the appstore:
-	Book
-	Business
-	Catalogs
-	Education
-	Entertainment
-	Finance
-	Food & Drink
-	Games
-	Health & Fitness
-	Lifestyle
-	Medical
-	Music
-	Navigation
-	News
-	Photo & Video
-	Productivity
-	Reference
-	Shopping
-	Social Networking
-	Sports
-	Travel
-	Utilities
+	Book,
+	Business,
+	Catalogs,
+	Education,
+	Entertainment,
+	Finance,
+	Food & Drink,
+	Games,
+	Health & Fitness,
+	Lifestyle,
+	Medical,
+	Music,
+	Navigation,
+	News,
+	Photo & Video,
+	Productivity,
+	Reference,
+	Shopping,
+	Social Networking,
+	Sports,
+	Travel,
+	Utilities,
 	Weather
+
 
 **2. Which is the genre with the most apps rated?**
 
 Games is the genre with the most apps rated, 3400
 
+
 **3. Which is the genre with most apps?**
 
 Games is the genre with the most apps, 3862
+
 
 **4. Which is the one with least?**
 
 Catalogs is the genre with the least apps, 10
 
+
 **5. Find the top 10 apps most rated.**
 
-Facebook
-Instagram
-Clash of Clans
-Temple Run	
-Pandora - Music & Radio
-Pinterest
-Bible
-Candy Crush Saga	
-Spotify Music
+Facebook,
+Instagram,
+Clash of Clans,
+Temple Run,	
+Pandora - Music & Radio,
+Pinterest,
+Bible,
+Candy Crush Saga,	
+Spotify Music,
 Angry Birds
+
 
 **6. Find the top 10 apps best rated by users.**
 
 Top 10 aps order by id are:
 
-:) Sudoku +
-King of Dragon Pass
-TurboScan    Pro - document....
-pages and photos to PDF
-Plants vs. Zombies
-Learn to Speak Spanish Fast With MosaLingua
-Plants vs. Zombies HD
-The Photographer's Ephemeris
-   Sudoku +
-Flashlight    
+:) Sudoku +,
+King of Dragon Pass,
+TurboScan    Pro - document.... ,
+pages and photos to PDF,,
+Plants vs. Zombies,
+Learn to Speak Spanish Fast With MosaLingua,
+Plants vs. Zombies HD,
+The Photographer's Ephemeris,
+   Sudoku +,
+Flashlight,    
 Infinity Blade
+
 
 **7. Take a look at the data you retrieved in question 5. Give some insights.**
 
 Most rated apps fall into such genres as Games, Social Networking, Photo & Video. There is a sharp drop in number of ratings between 4th and 5th place
 
+
 **8. Take a look at the data you retrieved in question 6. Give some insights.**
 
 Sorted by id, majority of best rated apps - 6 out of 10 - are from Games genre.
+
 
 **9. Now compare the data from questions 5 and 6. What do you see?**
 
@@ -92,6 +100,7 @@ I suggest to weight (multiply) user_rating by rating_count_tot, which gives thes
 Facebook
 Instagram
 Clash of Clans
+
 
 **11. Do people care about the price of an app?** 
 
