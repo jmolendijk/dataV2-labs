@@ -26,6 +26,7 @@ order by count(*) asc;
 
 /***5. Find the top 10 apps most rated.***/
 select track_name
+		, ver
 		, prime_genre
 		, rating_count_tot
 from app
@@ -35,6 +36,7 @@ limit 10;
 /***6. Find the top 10 apps best rated by users.***/
 select id
 		, track_name
+        , ver
         , prime_genre
         , user_rating
 from app
@@ -43,6 +45,7 @@ limit 10;
 
 /***10. How could you take the top 3 regarding both user ratings and number of votes?***/
 select track_name
+		, ver
 		, prime_genre
         , rating_count_tot*user_rating as rating_weighted
 from app

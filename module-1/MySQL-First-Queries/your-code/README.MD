@@ -80,12 +80,12 @@ Infinity Blade
 
 **7. Take a look at the data you retrieved in question 5. Give some insights.**
 
-Most rated apps fall into such genres as Games, Social Networking, Photo & Video. There is a sharp drop in number of ratings between 4th and 5th place
+In query 6. we found out which were the apps rated most often. Most often rated apps fall into such genres as Games, Social Networking, Photo & Video. There is a sharp drop in number of ratings between 4th and 5th place
 
 
 **8. Take a look at the data you retrieved in question 6. Give some insights.**
 
-Sorted by id, majority of best rated apps - 6 out of 10 - are from Games genre.
+In query 5. we found out which apps were rated the best by users. Sorted by id, majority of best rated apps - 6 out of 10 - are from Games genre.
 
 
 **9. Now compare the data from questions 5 and 6. What do you see?**
