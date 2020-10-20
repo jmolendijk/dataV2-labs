@@ -53,16 +53,17 @@ Group by AUTHOR_ID, TITLE;
 CHALLENGE 2
 */
 
-CREATE TEMPORARY TABLE summary2
-(select AUTHOR_ID, TITLE, sum(SALES_ROYALTY + ADVANCE) as 'TOTAL_PROFIT'
-	from (
+CREATE TEMPORARY TABLE summary
 		SELECT a.au_id as "AUTHOR_ID", t.title as "TITLE", t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 as "SALES_ROYALTY", t.advance * ta.royaltyper / 100 as "ADVANCE"
 		from authors a
 		INNER JOIN titleauthor ta on a.au_id = ta.au_id
 		INNER JOIN titles t on ta.title_id = t.title_id
 		INNER JOIN sales s on s.title_id = t.title_id
-		)summary
-Group by AUTHOR_ID, TITLE);
+;
+
+select AUTHOR_ID, TITLE, sum(SALES_ROYALTY + ADVANCE) as 'TOTAL_PROFIT'
+from summary
+Group by AUTHOR_ID, TITLE;
 
 /*
 CHALLENGE 3
