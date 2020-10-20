@@ -57,3 +57,40 @@
 |899-46-2035	|Ringer	|Anne	|Binnet & Hardley	|1
 |899-46-2035	|Ringer	|Anne	|New Moon Books	|1
 |998-72-3567	|Ringer	|Albert	|New Moon Books	|2
+
+
+## Challenge 3 - Best Selling Authors
+
+|au_id | au_lname | au_fname | total
+|:--- |:--- |:--- |:---
+|213-46-8915	|Green	|Marjorie	|2
+|998-72-3567	|Ringer	|Albert	|2
+|899-46-2035	|Ringer	|Anne	|2
+
+## Challenge 4 - Best Selling Authors Ranking
+
+|au_id | au_lname | au_fname | total
+|:--- |:--- |:--- |:---
+|213-46-8915	|Green	|Marjorie	|2
+|998-72-3567	|Ringer	|Albert	|2
+|899-46-2035	|Ringer	|Anne	|2
+|486-29-1786	|Locksley	|Charlene	|2
+|724-80-9391	|MacFeather	|Stearns	|2
+|267-41-2394	|O'Leary	|Michael	|2
+|672-71-3249	|Yokomoto	|Akiko	|1
+|648-92-1872	|Blotchet-Halls	|Reginald	|1
+|172-32-1176	|White	|Johnson	|1
+|846-92-7186	|Hunter	|Sheryl	|1
+|472-27-2349	|Gringlesby	|Burt	|1
+|807-91-6654	|Panteley	|Sylvia	|1
+|427-17-2319	|Dull	|Ann	|1
+|756-30-7391	|Karsen	|Livia	|1
+|409-56-7008	|Bennet	|Abraham	|1
+|274-80-9391	|Straight	|Dean	|1
+|722-51-5454	|DeFrance	|Michel	|1
+|712-45-1867	|del Castillo	|Innes	|1
+|238-95-7766	|Carson	|Cheryl	|1
+|527-72-3246	|Greene	|Morningstar	|0
+|893-72-1158	|McBadden	|Heather	|0
+|341-22-1782	|Smith	|Meander	|0
+|724-08-9931	|Stringer	|Dirk	|0
