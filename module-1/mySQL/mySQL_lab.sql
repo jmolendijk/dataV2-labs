@@ -235,4 +235,4 @@ where cus_email = '-' and cus_name = 'Napoléon Bonaparte';
 -- BONUS DELETE Challenge --
 
 delete from delete.cars
-where car_vin = 'DAM41UDN3CHU2WVF6' and car_id = 
+where car_vin = 'DAM41UDN3CHU2WVF6' and car_id = 5;
