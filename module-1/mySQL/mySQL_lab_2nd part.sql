@@ -1,57 +1,125 @@
 
--- Challenge 1 - Most Profiting Authors
 
--- Step 1 Calculate the royalty of each sale for each author and the advance for each author and publication--
+/* Hi Erin, I am trying the way Jan suggested earlier today: doing Challenge 2 first. You can find Challenge 1 right after, and Challenge 3 if for some fantastic miracle I manage to get there haha 
+*/
 
-select a.au_id, a.au_lname, a.au_fname,t.title_id,t.title, s.ord_num,t.price*s.qty*t.royalty/100*ta.royaltyper/100 as "royalty",t.advance*ta.royaltyper/100 as "advance",t.pub_id
+
+-- Challenge 2 - Alternative Solution -- This one I managed it, but I get a different solution Sniff :-(
+-- Step1 : Royalty of each sale and advance per author
+create temporary table Royalties
+select a.au_id as AuthorID,
+			t.title_id as TitleID,
+			t.price*s.qty*t.royalty/100*ta.royaltyper/100 as royalty, 
+			t.advance*ta.royaltyper/100 as advance
 from authors a
 inner join titleauthor ta 
-on a.au_id = ta.`au_id`
+on a.au_id = ta.au_id
 inner join titles t  
 on t.title_id = ta.title_id
 inner join sales s 
-on s.title_id =t.`title_id`
-inner join pub_info p on p.pub_id = t.pub_id;
+on s.title_id =t.title_id;
+
+-- Step2 : Sum of royalties --
+create temporary table Sum_of_Royalties
+select	AuthorID,
+			TitleID,
+			advance,
+			sum(royalty) as total_royalties
+from Royalties
+group by	AuthorID,
+				TitleID,
+				advance;
+
+-- Step 3: Total profit of each author
+select	AuthorID,
+			TitleID,
+			sum(total_royalties + advance) as profit
+from Sum_of_Royalties
+group by AuthorID,
+				TitleID
+order by profit desc
+limit 3;
 
 
--- Trying something here 
-select a.au_id,
-from (a.au_id, a.au_lname, a.au_fname,t.title_id,t.title, s.ord_num,t.price*s.qty*t.royalty/100*ta.royaltyper/100 as "royalty",t.advance*ta.royaltyper/100 as "advance",t.pub_id
+-- Challenge 1 - Most Profiting Authors with Subqueries
+
+-- Step 1 Royalty of each sale --
+
+-- This is Royalties temp table
+select a.au_id as AuthorID,
+			t.title_id as TitleID,
+			t.price*s.qty*t.royalty/100*ta.royaltyper/100 as royalty, 
+			t.advance*ta.royaltyper/100 as advance
 from authors a
 inner join titleauthor ta 
-on a.au_id = ta.`au_id`
+on a.au_id = ta.au_id
 inner join titles t  
 on t.title_id = ta.title_id
 inner join sales s 
-on s.title_id =t.`title_id`
-inner join pub_info p on p.pub_id = t.pub_id as Y)
-join AUTHORS a
-on a.au_id = blah.`title_id`
-goup by a.au_id;
+on s.title_id =t.title_id;
 
 
+-- Step2 : Sum of royalties -- I'm applying Jan's method of replacing the temporary table by the table query
 
--- create temporary table royalties_alex
-select a.au_id, a.au_lname, a.au_fname,t.title_id,t.title, s.ord_num,t.price*s.qty*t.royalty/100*ta.royaltyper/100 as "royalty",t.advance*ta.royaltyper/100 as "advance",t.pub_id
-from authors a
-inner join titleauthor ta 
-on a.au_id = ta.`au_id`
-inner join titles t  
-on t.title_id = ta.title_id
-inner join sales s 
-on s.title_id =t.`title_id`
-inner join pub_info p on p.pub_id = t.pub_id;
+-- This is Sum_of_Royalties temp table
+select	AuthorID,
+			TitleID,
+			advance,
+			sum(royalty) as total_royalties
+from(select a.au_id as AuthorID,
+			t.title_id as TitleID,
+			t.price*s.qty*t.royalty/100*ta.royaltyper/100 as royalty, 
+			t.advance*ta.royaltyper/100 as advance
+		from authors a
+		inner join titleauthor ta 
+		on a.au_id = ta.au_id
+		inner join titles t  
+		on t.title_id = ta.title_id
+		inner join sales s 
+		on s.title_id =t.title_id) as Royalties1
+		group by	AuthorID,
+						TitleID,
+						advance; -- YEEEE IT WORKED!!!! (This is the happiest moment this SQL assignment has provided! haha)
 
 
--- Step 2: Aggregate the total royalties for each title and author--
+-- Step 3: Total profit of each author--
 
-select au_id,title_id,sum(royalty) as total_royalties,advance
-from royalties_alex
-group by au_id,title_id,advance;
+select	AuthorID,
+			TitleID,
+			sum(total_royalties + advance) as profit
+from(select	AuthorID,
+			TitleID,
+			advance,
+			sum(royalty) as total_royalties
+from(select a.au_id as AuthorID,
+			t.title_id as TitleID,
+			t.price*s.qty*t.royalty/100*ta.royaltyper/100 as royalty, 
+			t.advance*ta.royaltyper/100 as advance
+		from authors a
+		inner join titleauthor ta 
+		on a.au_id = ta.au_id
+		inner join titles t  
+		on t.title_id = ta.title_id
+		inner join sales s 
+		on s.title_id =t.title_id) as Royalties1
+		group by	AuthorID,
+						TitleID,
+						advance) as Sum_of_Royalties1
+group by AuthorID,
+				TitleID
+order by profit desc
+limit 3;
 
+-- Oh wow it worked too. I stil need to check why is my result different...)
 
--- Step 3: Calculate the total profits of each author --
+-- Challenge 3 --
 
-select au_id,title_id, as profit,
-from royalties_alex
-group by au_id,title_id:
+-- @ Erin, I will create the table even if the result is different (now that the queries seem to be working-ish). I will update the data as soon as I find the error
+
+create table most_profiting_authors_AlexFinally
+select	AuthorID,
+			sum(total_royalties + advance) as profit
+from Sum_of_Royalties
+group by AuthorID
+order by profit desc
+limit 3;
