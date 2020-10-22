@@ -152,6 +152,6 @@ Analytic questions require you to think about the *how* of answering a question.
 This is one of the most interesting parts of the process and you will be doing it for the rest of the bootcamp (and most likely for the rest of your career as a data analyst).
 
 ### Resources
-* [Barcelona Open Data](https://opendata-ajuntament.barcelona.cat/en/)
+* [Gemeente Amsterdam - Data and Information](http://data.amsterdam.nl)
 * [new](http://data.amsterdam.nl)
 * [new2](https://)
