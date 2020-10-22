@@ -153,5 +153,3 @@ This is one of the most interesting parts of the process and you will be doing i
 
 ### Resources
 * [Gemeente Amsterdam - Data and Information](http://data.amsterdam.nl)
-* [new](http://data.amsterdam.nl)
-* [new2](https://)
