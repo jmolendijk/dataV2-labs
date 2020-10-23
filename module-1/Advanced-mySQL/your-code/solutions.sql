@@ -1,7 +1,7 @@
 use publications;
 
 /******Challenge 1 - Most Profiting Authors******/
-
+select * from titles;
 
 /***Step 1***/
 select t.title_id
@@ -19,29 +19,7 @@ on t.title_id = s.title_id;
 select ar.title_id
 		, ar.au_id
         , sum(ar.sales_royalty) as sum_sales_royalty
-        , sum(ar.advance) as sum_advance
-from
-		(select t.title_id
-				, ta.au_id
-				, t.advance*ta.royaltyper / 100 as advance
-				, t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 as sales_royalty
-		from titleauthor ta
-		inner join titles t
-		on ta.title_id = t.title_id   
-		inner join sales s
-		on t.title_id = s.title_id  
-        ) ar 
-group by ar.title_id, ar.au_id
-        ;
-        
-/***Step 3***/
-select prof.au_id
-        , sum(prof.sum_sales_royalty)+sum(prof.sum_advance) as total_profits
-from
-		(select ar.title_id
-		, ar.au_id
-        , sum(ar.sales_royalty) as sum_sales_royalty
-        , sum(ar.advance) as sum_advance
+        , ar.advance as advance
 		from
 				(select t.title_id
 						, ta.au_id
@@ -53,10 +31,32 @@ from
 				inner join sales s
 				on t.title_id = s.title_id  
 				) ar 
-		group by ar.title_id, ar.au_id
+		group by ar.title_id, ar.au_id, ar.advance
+        ;
+
+/***Step 3***/
+select prof.au_id
+        , sum(prof.sum_sales_royalty)+sum(prof.advance) as total_profits
+from
+		(select ar.title_id
+		, ar.au_id
+        , sum(ar.sales_royalty) as sum_sales_royalty
+        , ar.advance as advance
+		from
+				(select t.title_id
+						, ta.au_id
+						, t.advance*ta.royaltyper / 100 as advance
+						, t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 as sales_royalty
+				from titleauthor ta
+				inner join titles t
+				on ta.title_id = t.title_id   
+				inner join sales s
+				on t.title_id = s.title_id  
+				) ar 
+		group by ar.title_id, ar.au_id, ar.advance
 ) prof
 group by prof.au_id
-order by sum(prof.sum_sales_royalty)+sum(prof.sum_advance) desc
+order by sum(prof.sum_sales_royalty)+sum(prof.advance) desc
 limit 3;
 
 
@@ -79,9 +79,9 @@ create temporary table ta_ar_sum
 		select ar.title_id
 				, ar.au_id
 				, sum(ar.sales_royalty) as sum_sales_royalty
-				, sum(ar.advance) as sum_advance
+				, ar.advance as sum_advance
 		from ta_ar ar 
-		group by ar.title_id, ar.au_id;
+		group by ar.title_id, ar.au_id, ar.advance;
  
 -- step 3 
 select prof.au_id
@@ -97,26 +97,26 @@ limit 3;
 
 create table most_profiting_authours_iryna_daftoct2020
 			select prof.au_id
-					, sum(prof.sum_sales_royalty)+sum(prof.sum_advance) as total_profits
-			from
-					(select ar.title_id
-					, ar.au_id
-					, sum(ar.sales_royalty) as sum_sales_royalty
-					, sum(ar.advance) as sum_advance
-					from
-							(select t.title_id
-									, ta.au_id
-									, t.advance*ta.royaltyper / 100 as advance
-									, t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 as sales_royalty
-							from titleauthor ta
-							inner join titles t
-							on ta.title_id = t.title_id   
-							inner join sales s
-							on t.title_id = s.title_id  
-							) ar 
-					group by ar.title_id, ar.au_id
-			) prof
-			group by prof.au_id
-			order by sum(prof.sum_sales_royalty)+sum(prof.sum_advance) desc
-			limit 3;
+        , sum(prof.sum_sales_royalty)+sum(prof.advance) as total_profits
+from
+		(select ar.title_id
+		, ar.au_id
+        , sum(ar.sales_royalty) as sum_sales_royalty
+        , ar.advance as advance
+		from
+				(select t.title_id
+						, ta.au_id
+						, t.advance*ta.royaltyper / 100 as advance
+						, t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 as sales_royalty
+				from titleauthor ta
+				inner join titles t
+				on ta.title_id = t.title_id   
+				inner join sales s
+				on t.title_id = s.title_id  
+				) ar 
+		group by ar.title_id, ar.au_id, ar.advance
+) prof
+group by prof.au_id
+order by sum(prof.sum_sales_royalty)+sum(prof.advance) desc
+limit 3;
             
