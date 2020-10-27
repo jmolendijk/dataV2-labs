@@ -45,7 +45,7 @@
 # print(BatchStringGenerator(int(n), int(a), int(b)))
 
 
-# In[153]:
+# In[158]:
 
 
 #refactored code
@@ -57,7 +57,6 @@ def RandomStringGenerator(l=12, chars=list(string.ascii_lowercase + string.digit
     return ''.join([random.choice(chars) for p in range(l)])
 
 def BatchStringGenerator(n, a=8, b=12):
-    r = []
     try:
         RandomStringGenerator(random.choice(range(a, b+1)))
     except:
@@ -66,7 +65,7 @@ def BatchStringGenerator(n, a=8, b=12):
         return [RandomStringGenerator(random.choice(range(a, b+1))) for i in range(n)]
 
 
-# In[157]:
+# In[159]:
 
 
 a = int(input('Enter minimum string length: '))
