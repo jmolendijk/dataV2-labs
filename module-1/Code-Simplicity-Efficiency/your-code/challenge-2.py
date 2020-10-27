@@ -9,7 +9,7 @@ about simple and efficient code, refactor the code.
 import random
 import sys
 
-def RandomStringGenerator(l=12, a=                 ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
+def RandomStringGenerator(l=12, a=list(string.ascii_lowercase + string.digits)):
     p = 0
     s = ''
     while p<l:
