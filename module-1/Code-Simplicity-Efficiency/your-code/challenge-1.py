@@ -7,7 +7,7 @@ expects.
 
 The code is very long and messy. Refactor it according to what you have learned about
 code simplicity and efficiency.
-"""
+
 
 print('Welcome to this calculator!')
 print('It can add and subtract whole numbers from zero to five')
@@ -167,3 +167,22 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+-
+"""
+
+def fun():
+    print('Welcome to this calculator!')
+    print('It can add and subtract whole numbers from 0 to 5')
+    a = int(input('Please choose your first number (0 to 5): '))
+    b = input('What do you want to do? (+ or -): ')
+    c = int(input('Please choose your second number (0 to 5): '))
+    if a <= 5 and c <= 5:
+        if b == '-':
+            print (a - c)
+        elif b == '+':
+            print (a + c)
+    else:
+        print("I am not able to answer this question. Check your input.")
+fun()
+
+
