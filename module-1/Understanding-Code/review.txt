@@ -1,0 +1,8 @@
+0. Great job for such a short time given!
+
+1. Functions text should be our of the main function and only returns should be passed.
+
+2. There is no information about what is wrong with my input.
+
+3. Keys for guesses should be more informative or there should be a legend how to read it.
+
