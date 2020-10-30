@@ -1,0 +1,19 @@
+1) I suggest an alternate way to define the variables in the code: 
+
+hand = []
+    for i in range(2):
+	    random.shuffle(deck)
+	    card = deck.pop()
+	    if card == 11:card = "J"
+	    if card == 12:card = "Q"
+	    if card == 13:card = "K"
+	    if card == 14:card = "A"
+	    hand.append(card)
+    return hand
+
+2) Also suggested an alternative method to define the score and to deal with the output messages to be displayed the user
+
+---------------------------
+
+I received positive feedback about how I commented the important lines in y own code.
+
