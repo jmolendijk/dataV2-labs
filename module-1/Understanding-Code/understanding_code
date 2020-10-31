@@ -1,0 +1,8 @@
+Positives:
+* Great usage of functions - Creating different functions and calling them inside the main function.
+* Using Comments - Well explained the functionality of a module by using comments.
+* Used regular expressions and list comprehension 
+
+Can Improve:
+* usage of variable names - used char 'l' in a for loop which is looking like a number 1.
+* Internally given a hardcoded number for a function which I got confused which can be explained in comments. 
