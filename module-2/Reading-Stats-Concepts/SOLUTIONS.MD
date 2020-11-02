@@ -22,10 +22,10 @@ We have told you that a lot of scientifical investigations are based on p-values
 
 #### Answer
 
-In hyphothesis testing p-value is used to prove (= not reject) or disprove (reject) the null hyphothesis, which is usually 'no effect' for example no assosiation between varibales, or no difference between means of two groups, etc. The p-value is a measure of probability that the observed difference occured due to chance, such as positive or negative effect of one varible on another was due to chance, or difference in means of a target variable between two study groups was due to chance. Low p-values support evidence against null hyphothesis and high p-values support evidence in favour of null hyphothesis. 
+In hyphothesis testing p-value is used to prove, not reject, or disprove, or reject, the null hyphothesis. Null hyphothesis is usually 'no effect': for example no assosiation between varibales, or no difference between means of two groups in a strudy, etc. The p-value is a measure of probability that the observed difference occured due to chance, such as positive or negative effect of one varible on another was due to chance, or difference in means of a target variable between two study groups was due to chance. Low p-values support evidence against null hyphothesis and high p-values support evidence in favour of null hyphothesis. 
 
 The problems with the p-value are few:
-- the decision on rejecting on rejecting p-value is usually made based on an **arbitrary p-value of 0.05**. For example, null hyphothesis is rejected if p-value is less thant 0.05, in other words there is less than 5% chance that the non-zero effect we observed is due to chance. It is recommended to state the obtained p-values so that the reader can make their own interpretation, as well as explain the threshhold value
+- the decision on rejecting on not rejecting p-value is usually made based on a cut-off point of 0.05, which is **arbitrary**. For example, null hyphothesis is rejected if p-value is less thant 0.05, in other words there is less than 5% chance that the non-zero effect observed is due to chance. It is recommended to always state the obtained p-values so that the reader can make their own interpretation, as well as explain why a specific threshhold values, 0.05 or otherwise, was chosen.
 
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
