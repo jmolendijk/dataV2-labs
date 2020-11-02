@@ -3,7 +3,6 @@
 # Lab | Reading About Statistic Concepts
 
 
-
 ## Challenges
 
 ### Challenge 1: What is the difference between expected value and mean?
