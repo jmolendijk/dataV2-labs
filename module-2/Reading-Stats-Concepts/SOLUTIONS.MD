@@ -12,7 +12,7 @@ You know both concepts but, is there a difference? Are they synonims? Start inve
 
 Expected value for a discrete random  variable, or the random variables for which outcomes are countable, is weighted average of outcomes of  this random variable. And the weights are probabilities, or relative frequencies, of each random variable outcome.
 
-Expected value and mean are the same thing, however expected value and arithmentic mean, or average, are not. The connection between arithmetic mean, or avergae, and the expected value is that arithmetic mean will converge to expected value of a random variable over a large number of observations, or experiments. To be precise, the equality is reached over inifinite number of experiments.   
+**Expected value** and **mean** are the same thing, however expected value and **arithmentic mean**, or **average**, are not. The connection between arithmetic mean, or avergae, and the expected value is that arithmetic mean will converge to expected value of a random variable over a large number of observations, or experiments. To be precise, the equality is reached over inifinite number of experiments.   
 
 
 ### Challenge 2: What is the "problem" in science with p-values?
