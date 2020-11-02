@@ -10,15 +10,22 @@ You know both concepts but, is there a difference? Are they synonims? Start inve
 
 #### Answer
 
-Expected value for a discrete random  variable, or the random variables for which outcomes are countable, is weighted average of outcomes of  this random variable. And the weights are probabilities, or relative frequencies, of each random variable outcome.
+Expected value for a discrete random  variable, or the random variables for which outcomes are countable, is weighted average of outcomes of  this random variable. The weights are probabilities, or relative frequencies, of each random variable outcome.
 
-**Expected value** and **mean** are the same thing, however expected value and **arithmentic mean**, or **average**, are not. The connection between arithmetic mean, or avergae, and the expected value is that arithmetic mean will converge to expected value of a random variable over a large number of observations, or experiments. To be precise, the equality is reached over inifinite number of experiments.   
+**Expected value** and **mean** are the same thing, however expected value and **arithmentic mean**, or **arithmentic average**, are not. The connection between arithmetic mean, or avergae, and the expected value is that arithmetic mean will converge to expected value of a random variable over a large number of observations, or experiments. To be precise, the equality is reached over inifinite number of experiments.   
+
+The expected value is also called the expectation, mathematical expectation, average, first moment.
 
 
 ### Challenge 2: What is the "problem" in science with p-values?
 We have told you that a lot of scientifical investigations are based on p-values. The last week, Nature magazine published [an article](http://nature.social/statistical4) regarding the problem. Start digging on it!
 
 #### Answer
+
+In hyphothesis testing p-value is used to prove (= not reject) or disprove (reject) the null hyphothesis, which is usually 'no effect' for example no assosiation between varibales, or no difference between means of two groups, etc. The p-value is a measure of probability that the observed difference occured due to chance, such as positive or negative effect of one varible on another was due to chance, or difference in means of a target variable between two study groups was due to chance. Low p-values support evidence against null hyphothesis and high p-values support evidence in favour of null hyphothesis. 
+
+The problems with the p-value are few:
+- the decision on rejecting on rejecting p-value is usually made based on an **arbitrary p-value of 0.05**. For example, null hyphothesis is rejected if p-value is less thant 0.05, in other words there is less than 5% chance that the non-zero effect we observed is due to chance. It is recommended to state the obtained p-values so that the reader can make their own interpretation, as well as explain the threshhold value
 
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
