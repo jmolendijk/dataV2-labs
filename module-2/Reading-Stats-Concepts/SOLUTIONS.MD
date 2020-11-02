@@ -8,13 +8,13 @@
 ### Challenge 1: What is the difference between expected value and mean?
 You know both concepts but, is there a difference? Are they synonims? Start investigating. 
 
-#### Answer
+### - Answer
 
 
 ### Challenge 2: What is the "problem" in science with p-values?
 We have told you that a lot of scientifical investigations are based on p-values. The last week, Nature magazine published [an article](http://nature.social/statistical4) regarding the problem. Start digging on it!
 
-#### Answer
+### - Answer
 
 
 ### Challenge 3: Applying testing to a specific case: A/B testing.
@@ -44,5 +44,5 @@ Read more about A/B testing with a couple of examples:
 
 So, take one single example in the articles you just read, which specific test/s would you apply? (We want you just to do a draft and think a little bit how to apply the tests you already know in this case)
 
-#### Answer
+### - Answer
 
