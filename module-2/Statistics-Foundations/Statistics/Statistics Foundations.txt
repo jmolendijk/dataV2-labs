@@ -1,0 +1,136 @@
+Challenge 1
+
+One player rolls two dices. Describe the measurable space and the random variable for:
+
+    A. The values that the player obtains.
+    B. The sum of the values obtained.
+    C. The maximum value obtained after rolling both dices.
+    
+    
+Solution: 
+Considering for identical dices - 
+The measurable space would be - there are 21 outcomes of it
+(1,1) (2,2) (3,3) (4,4) (5,5) (6,6)
+(1,2) (2,3) (3,4) (4,5) (5,6)
+(1,3) (2,4) (3,5) (4,6) 
+(1,4) (2,5) (3,6)
+(1,5) (2,6)
+(1,6)
+
+The values that the player obtains: I have considered the (1,2) or (2,1) as same because these are identical dices wouldn't matter the order how they rolled.
+(1,1) (2,2) (3,3) (4,4) (5,5) (6,6)
+(1,2) (2,3) (3,4) (4,5) (5,6)
+(1,3) (2,4) (3,5) (4,6) 
+(1,4) (2,5) (3,6)
+(1,5) (2,6)
+(1,6)
+
+The sum of the values obtained - 
+sum of values obtained would be from the range of 2 to 12 that would be the minimum measurable space is (1,1) when it is added it gives us 2. The maximum measurable space is (6,6) which is 12.
+
+The maximum value obtained after rolling both dices - 
+would be 12 where (6,6)  is the maximum in our measurable space.
+
+
+
+Describe the following events:
+
+    Case A: Both values are greater than 5.-
+    Looking from the measurable space we can see only (6,6) are the greater values from 5
+    
+    Case B: The sum of values is even. - 
+    I'm considering [(1,1),(1,3),(1,5),(2,2),(2,4),(2,6),(3,3),(3,5),(4,4),(4,6),(5,5),(6,6)] there are 12 outcomes which has the values as even 
+    
+    Case C: The maximum is the value of both rolls. - 
+    so the maximum dice value would be (6,6)
+    
+    
+ 
+
+Challenge 2
+
+One player picks two cards from a poker deck. Describe the measurable space and the random variable for:
+The measurable space is: 52 Outcomes
+(A spades) (A clubs) (A heart) (A diamonds)
+(2 spades) (2 clubs) (2 heart) (2 diamonds)
+(3 spades) (3 clubs) (3 heart) (3 diamonds)
+(4 spades) (4 clubs) (4 heart) (4 diamonds)
+(5 spades) (5 clubs) (5 heart) (5 diamonds)
+(6 spades) (6 clubs) (6 heart) (6 diamonds)
+(7 spades) (7 clubs) (7 heart) (7 diamonds)
+(8 spades) (8 clubs) (8 heart) (8 diamonds)
+(9 spades) (9 clubs) (9 heart) (9 diamonds) 
+(10 spades) (10 clubs) (10 heart) (10 diamonds)
+(J spades) (J clubs) (J heart) (J diamonds)
+(Q spades) (Q clubs) (Q heart) (Q diamonds)
+(K spades) (K clubs) (K heart) (K diamonds)
+
+    A. The number of figures he picks. - 
+    if the first card is a figure so he have a probabilty of 12/52 and the second card is also a figure then it is 11 / 52.
+    But if the first card is figure so he have 12/52 and the second card is non face cards then he has a probability of 40/ 52.
+    
+    B. The sum of card values. Consider that the value of figures is 10 and the value of aces is 15.
+    If two cards are the figures then the sum is 20
+    If the first card is figure and second is  not then the sum would be te value of the number plus the figure which is 10.
+    But if the second card is Aces then it would be 15 + 10 = 25
+    
+    C. The number of hearts or spades he picks. 
+    Considering two cases in this - if the first card is a heart is 13/52 chances and second card if its a spade is 13/52 
+
+
+
+Describe the following events:
+
+    Case A: The number of figures in the cards the player picked is two. - 
+    [(K,K), (K,Q), (K,J), (Q,K), (Q,Q), (Q,J), (J,K), (J,Q), (J,J)]
+    
+    Case B: The sum of card values is 17. - 
+    [(J + 7), (Q + 7), (K + 7), (A + 2), (10 + 7), (9 + 8)], so there are 6 chances 
+    
+    Case C: The value of both cards is less than 8. 
+    [(2 + 3), (2 + 4), (2 + 5), (3 + 3), (3 + 4)] , so there are 5 chances.
+
+
+
+Challenge 3
+
+Two players roll a dice. Describe the measurable space and the random variable for:
+
+    A. The score of player A. - 
+    it can be 1 or 2 or 3 or 4 or 5 or 6
+    
+    B. The greatest score. -  
+    6 would be the greatest score
+    
+    C. The earnings of player A if the game rules state that:
+    "The player with the greatest score gets a coin from the other player.".
+    If A has the max score than B then he gets 1 coin 
+    example[(6,5),(6,4),(6,3),(6,2),(6,1),(5,4),(5,3),(5,2),(5,1),(4,3),(4,2),(4,1),(3,2),(3,1),(2,1)] = 15 chances
+    
+    
+    D. The earnings of player A if the game rules state that:
+    "The player with the greatest score gets as many coins as the difference between the score of player A and player B.".
+    If A has the max score then he gets the difference bewteen them
+    example[(6,5) = 6 - 5 = 1], [(6, 1) = 6 - 1 = 5]
+
+
+
+Describe the following events:
+
+    Case A: The score of player A is 2. - So the face of the dice of A has to be 2.
+    ex = [(2,1),(2,2)] = 6 outcomes
+    
+    Case B: The greatest score is lower or equal than 2.
+    The sum of 2 faces should be less than or equal to 2
+    [(1,1)]
+    
+    
+    Case C: Considering the case where the winner gets as many coins as the difference between scores (D), describe:
+        Player A wins at least 4 coins. 
+        [6,5),(6,4),(6,3),(6,2)]
+        
+        Player A loses more than 2 coins.
+        [(3,6), (2,6), (1,6)]
+        
+        Player A neither wins nor loses coins.
+        [(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)] = 6 outcomes
