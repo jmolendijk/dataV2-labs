@@ -63,7 +63,7 @@ Describe the following events:
 
 * Case B: The sum of card values is 17.
     
-    >**1 outcomes - out of 19 possible sums, combinations of cards: (7&jack) +(7&king)+(7&queen)+(7&10) = 4*(4*4) = 64 combinations* 
+    >**1 outcomes - out of 19 possible sums, combinations of cards: (7&jack) +(7&king)+(7&queen)+(7&10) = 4*(4*4) = 64 combinations** 
     
 * Case C: The value of both cards is less than 8.
 
