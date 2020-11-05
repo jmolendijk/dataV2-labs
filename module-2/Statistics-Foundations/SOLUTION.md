@@ -10,7 +10,7 @@ In this lab we are going to put into practice what we learned about the foundati
 One player rolls two dices. Describe the measurable space and the random variable for:
 * A. The values that the player obtains.
 
-21 outcomes:
+    21 outcomes:
     (1,1)	(1,2)	(1,3)	(1,4)	(1,5)	(1,6)
             (2,2)	(2,3)	(2,4)	(2,5)	(2,6)
                     (3,3)	(3,4)	(3,5)	(3,6)
@@ -29,22 +29,23 @@ One player rolls two dices. Describe the measurable space and the random variabl
 Describe the following events:
 * Case A: Both values are greater than 5.
     
-    One possible outcome (6,6)  
+    >One possible outcome (6,6)  
       
 * Case B: The sum of values is even.
       
-     12 Outcomes : (2,2), (2,4), (2,6), (4,4), (4,6), (6,6), (1,1), (1,3), (1,5), (3,3), (3,5), (5,5)      
+     >12 Outcomes : (2,2), (2,4), (2,6), (4,4), (4,6), (6,6), (1,1), (1,3), (1,5), (3,3), (3,5), (5,5)      
         
 * Case C: The maximum is the value of both rolls.
      
-     6 Outcomes: 1, 2, 3, 4, 5, 6 for events (1,1), (2,2), (3,3), (4,4), (5,5), (6,6)
+     >6 Outcomes: 1, 2, 3, 4, 5, 6 for events (1,1), (2,2), (3,3), (4,4), (5,5), (6,6)
         
 
 ### Challenge 2
 One player picks two cards from a poker deck. Describe the measurable space and the random variable for:
 * A. The number of figures he picks.
+    
     282 outcomes: 66 (2 figure cards from 12 possible figure cards, no repetitions) 
-                + 432 (1 figure and one reguler card 36*12/2) 
+                + 216 (1 figure and one reguler card 36*12/2) 
     
 * B. The sum of card values. Consider that the value of figures is 10 and the value of aces is 15.
 * C. The number of hearts or spades he picks.
