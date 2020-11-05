@@ -117,6 +117,7 @@ Describe the following events:
 ### Bonus Challenge 1
 Three players take balls from a box. Inside that box there are red, blue, green and black balls. The players can take three balls at mosts with the following rules:
 
+
 * If the ball is blue, they can take another ball.
 * If the ball is green, they get one point and they can take another ball.
 * If the ball is red, they can’t take another ball.
