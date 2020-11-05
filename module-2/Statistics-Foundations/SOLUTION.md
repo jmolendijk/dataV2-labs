@@ -11,8 +11,7 @@ One player rolls two dices. Describe the measurable space and the random variabl
 * A. The values that the player obtains.
 
     >**21 outcomes:
-    **(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (2,2), (2,3), (2,4), (2,5), (2,6)
-    **(3,3), (3,4), (3,5), (3,6), (4,4), (4,5), (4,6), (5,5), (5,6), (6,6)**
+    **(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (2,2), (2,3), (2,4), (2,5), (2,6), (3,3), (3,4), (3,5), (3,6), (4,4), (4,5), (4,6), (5,5), (5,6), (6,6)**
 
 * B. The sum of the values obtained.
     
@@ -40,7 +39,7 @@ Describe the following events:
 One player picks two cards from a poker deck. Describe the measurable space and the random variable for:
 * A. The number of figures he picks.
     
-    >**282 outcomes: 66 (2 figure cards from 12 possible figure cards, no repetitions)+ 216 
+    >**282 outcomes: 66 (2 figure cards from 12 possible figure cards, no repetitions)+ 216 **
     **(one figure and one reguler card 36*12/2)** 
     
 * B. The sum of card values. Consider that the value of figures is 10 and the value of aces is 15.
