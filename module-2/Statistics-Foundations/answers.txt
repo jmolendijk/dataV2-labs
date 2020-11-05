@@ -1,4 +1,4 @@
-Challenge 1
+**Challenge 1**
 One player rolls two dices. Describe the measurable space and the random variable for:
 
 A. The values that the player obtains.
@@ -28,7 +28,7 @@ Case B: The sum of values is even.
 Case C: The maximum is the value of both rolls.
 	
 
-Challenge 2
+**Challenge 2**
 One player picks two cards from a poker deck. Describe the measurable space and the random variable for:
 
 A. The number of figures he picks.
@@ -89,7 +89,7 @@ Case C: The value of both cards is less than 8.
 5D	2D			2H				2S				2C			
 
 
-Challenge 3
+**Challenge 3**
 Two players roll a dice. Describe the measurable space and the random variable for:
 
 A. The score of player A.
@@ -132,7 +132,7 @@ Player A wins at least 4 coins.
 		5(A) & 1(B)
 
 Player A loses more than 2 coins.
-	So he loses eighter 3, 4 or 5.
+	So he loses either 3, 4 or 5.
 	There is one of the following pairs on the table:
 		6(B) & 3(A)
 		6(B) & 2(A)
@@ -144,4 +144,22 @@ Player A loses more than 2 coins.
 Player A neither wins nor loses coins.
 	There is a tie on the table:
 	1-1, 2-2, 3-3, 4-4, 5-5, 6-6
-	
+
+
+**Bonus Challenge 3**
+One player takes three balls from a box. Inside the box there are 5 balls: two of them are black and the other three are white.
+
+Describe the measurable space and the random variable for:
+
+A. The number of white balls if every time we take a ball we keep it.
+	There always will be 3 white balls and 2 black balls in the box before the player's move.
+	Variables are 3 white balls and 3 random balls taken.
+
+B. The number of white balls if every time we take a ball we put it back again into the box.
+	Our starting point is box with 3 white balls but once the first ball is taken out our box can either have still 3 white
+	balls or 2 & 2, 1 or 0 black balls. Similar with the last turn - it can be either 3, 2 or 1 white ball left in the box &
+	2, 1 or 0 black balls.
+
+C. The number of black balls if every time we take a ball we keep it.
+D. The number of black balls if every time we take a ball we put it back into the box.
+	I think for black balls measurable space and the random variable will be the same as for white balls.
