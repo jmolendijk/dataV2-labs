@@ -20,7 +20,7 @@ One player rolls two dices. Describe the measurable space and the random variabl
 
 * B. The sum of the values obtained.
     
-    >Range : [2;12] - 11 potential outcomes
+    >*Range : [2;12] - 11 potential outcomes*
         
 * C. The maximum value obtained after rolling both dices.
     
@@ -45,7 +45,7 @@ One player picks two cards from a poker deck. Describe the measurable space and 
 * A. The number of figures he picks.
     
     >282 outcomes: 66 (2 figure cards from 12 possible figure cards, no repetitions) 
-                + 216 (1 figure and one reguler card 36*12/2) 
+                + 216 (one figure and one reguler card 36*12/2) 
     
 * B. The sum of card values. Consider that the value of figures is 10 and the value of aces is 15.
 * C. The number of hearts or spades he picks.
