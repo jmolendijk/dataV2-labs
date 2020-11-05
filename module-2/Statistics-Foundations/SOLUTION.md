@@ -9,7 +9,7 @@ In this lab we are going to put into practice what we learned about the foundati
 ### Challenge 1
 One player rolls two dices. Describe the measurable space and the random variable for:
 * A. The values that the player obtains.
-     21 outcomes:
+**21 outcomes:
     (1,1)	(1,2)	(1,3)	(1,4)	(1,5)	(1,6)
             (2,2)	(2,3)	(2,4)	(2,5)	(2,6)
                     (3,3)	(3,4)	(3,5)	(3,6)
