@@ -20,7 +20,7 @@ One player rolls two dices. Describe the measurable space and the random variabl
 
 * B. The sum of the values obtained.
     
-    >*Range : [2;12] - 11 potential outcomes*
+    >**Range : [2;12] - 11 potential outcomes**
         
 * C. The maximum value obtained after rolling both dices.
     
