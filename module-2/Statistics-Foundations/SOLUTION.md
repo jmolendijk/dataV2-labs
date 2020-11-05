@@ -44,7 +44,7 @@ Describe the following events:
 One player picks two cards from a poker deck. Describe the measurable space and the random variable for:
 * A. The number of figures he picks.
     
-    282 outcomes: 66 (2 figure cards from 12 possible figure cards, no repetitions) 
+    >282 outcomes: 66 (2 figure cards from 12 possible figure cards, no repetitions) 
                 + 216 (1 figure and one reguler card 36*12/2) 
     
 * B. The sum of card values. Consider that the value of figures is 10 and the value of aces is 15.
