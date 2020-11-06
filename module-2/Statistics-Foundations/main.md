@@ -97,20 +97,11 @@ The measureable space is:
 (8,9)
 (9,8)
 
-Sums will have value {4-25, 30}
-
 
 *** Case C: The value of both cards is less than 8.
-The measureable space is 16 , taking into consideration that the order does not matter (e.g. 10,7 = 7,10). Otherwise, it is 32.
+The measureable space is :
+First card between 2 and 7, the second is between 7 and 2
 
-
-(1,1) (2,2) (3,3) (4,4)
-(1,2) (2,3) (3,4) 
-(1,3) (2,4) (3,5) 
-(1,4) (2,5) 
-(1,5) (2,6)
-(1,6)
-(1,7)
 
 ---- CHALLENGE 3 ----
 
