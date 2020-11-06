@@ -82,12 +82,22 @@ First, he could pick 1 card out of the 12 faced cards, and then a second card ou
 12*11 = 132.
 
 *** Case B: The sum of card values is 17.
-The measureable space is 4, taking into consideration that the order does not matter (e.g. 10,7 = 7,10). Otherwise, it is 4.
+The measureable space is:
 
 (10,7)
-(9,6)
-(8,7)
-(7,7)
+(7,10)
+(J,7)
+(7,J)
+(K,10)
+(7,K)
+(Q,A)
+(7,Q)
+(2,A)
+(A,2)
+(8,9)
+(9,8)
+
+Sums will have value {4-25, 30}
 
 
 *** Case C: The value of both cards is less than 8.
