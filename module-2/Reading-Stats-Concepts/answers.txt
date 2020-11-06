@@ -12,3 +12,12 @@ other parameters should be also taken into account together with p-value.
 
 
 Challenge 3: Applying testing to a specific case: A/B testing.
+Basecamp example.
+For the situation described by data secialist of Basecamp I don't see easy straightforward way to create testing enviroment.
+Main issue I see to make sure your focus group is representative and it's easy to arrange for known customers (as in an example from
+Netflix, for instanse) but in case of Basecamp we're speaking about potential clients, i.e. background of user analysed is unclear.
+How to specify their occupation? Or country? Yes, there are IPs but what if person is using VPN? Or some other characteristics that might
+be relevant to a change we're testing? Maybe it's worth to set up small pop-up form for all unregistered users entering the site and then
+to split them between focus group and control group.
+Also it's important to take into account seasoning of demand. Probably it's a good idea to start testing in the beggining of the year
+where level of new subscriptions is usually high, I will allow to sorten testing time getting representative results at the same time.
