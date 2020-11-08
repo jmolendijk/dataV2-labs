@@ -1,0 +1,32 @@
+Challenge 1: What is the difference between expected value and mean? 
+
+Solution:
+Arithmetic mean is simple average of numbers not weighted by anything. However in Expected Value, the numbers are weighted by their probability
+for example: there is a data set is {1,2,2,3,3,3,4,4,5}. 
+Here the mean is 3. 
+The EV is calculated by how many times the value is repeated in the dataset which is (1/9)*1+(2/9)*2+(3/9)*3+(2/9)*4+(1/9)*5. 
+Here again answer is 3. 
+Actually when we multiply by weight we get our data back and we essentially do the same thing. 
+
+
+Challenge 2: What is the "problem" in science with p-values?
+
+Solution:
+p-value: it is the probability of finding observed evidence when the null hypothesis is true. The lower the p-value, the greater the significance of the evidence. 
+
+The problem with p-values is that p value is conditioned on the null hypothesis being true, it therefore cannot be used to give a probability that the null hypothesis may be true or indeed false.
+
+While p-values can be very useful in statistics, they can also be manipulated. p-hacking (data dredging) and p-HARKing (hypothesis after results are known) are processes by which researchers collect or select data that make nonsignificant results become significant.
+
+Influencing data to make it significant, or to draw a hypothesis after you already know the results, is just bad science. It is the responsibility of the scientific community to know what a truly significant p-value looks like, and more importantly, what it means.
+
+
+Challenge 3: Applying testing to a specific case: A/B testing.
+Solution:
+
+People to lookup for the best games that we think can be done by focusing on the artwork. From the article of Netflix we came to know how artwork is important to click particular title. From the artwork itself we should have to guess the genre of the series or movie is going to be whether its a thriller, comedy or action.
+
+So, when creating a game we have to make sure it should connect the people, the demo version has to be understandable from which
+we can get reviews and from that reviews we can focus on the title with ratings. 
+
+From ratings people can easily find out the game.
