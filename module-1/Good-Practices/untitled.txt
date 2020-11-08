@@ -1,7 +1,7 @@
 upload good practices
 
-making clear programming
+making clear programming for others
 
-understanding why
+understanding why certain solutions are betters than others
 
 try to make as much bonus challenges as possible
