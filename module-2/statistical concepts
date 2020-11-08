@@ -1,0 +1,56 @@
+Challenge 1: What is the difference between expected value and mean?
+
+Both expected value and the mean are average value, however, within a different context, expected value is the average value of a random variable.
+When calculating the mean, e.g. you want to calculate the average age of a sample, you sum all the values (in this case the age) and divide this by the length of your sample (N). 
+When calculating the expected value, you map all possible outcomes against their probability, and this will be the average value of the random variable
+
+https://medium.com/jun-devpblog/prob-stats-3-expected-value-variance-and-standard-deviation-bce9303d8da8
+https://towardsdatascience.com/what-is-expected-value-4815bdbd84de
+
+
+Challenge 2: What is the "problem" in science with p-values?
+
+P value = probability about data
+p values only provide indirect evidence, and furthermore, it brings this indirect evidence against the assertion but cannot bring evidence in favor of the assertion --> proof by contradiction
+
+proof by contradiciton is only valid in the context of rules of logic where assertions are true or false without any uncertainty
+
+When the p-value is small, researchers believe that their conceptual framework has been validated.
+--> wrong interpretations
+
+mis interpretation about the p value: if the p value is larger than the threshold value (e.g. 0.5), and therefore there is no significant result, there should not be concluded there is no association, it does not mean that if the effect is statistically non significant, the result can just be dismissed, as these could still be genuine effects, and therefore could be very important
+
+https://www.fharrell.com/post/pval-litany/#:~:text=Because%20of%20A%20above%2C%20p,properly%20calibrated%20for%20decision%20making.
+https://www.nature.com/articles/d41586-019-00857-9
+https://www.fharrell.com/post/nhst-never/
+
+
+Challenge 3: Applying testing to a specific case: A/B testing
+
+The development of new features, or the change of existing features on your website.
+A/B testing --> split testing, to determine whether a new design brings improvement, according to a certain metric 
+Keep in mind that the larger your sample, (according to the central limit theorem), the bigger chance your sample mean is close to the 'real' population mea
+
+Goal = help members of Netflix find and enjoy videos as fast as possible (so actually help members select the right video as fast as possible)
+
+Before we start with testing, we check the average click through rate of the movie, and discuss the desired increase of the rate
+
+Than, choose the two designs you want to test and create your hypotheses
+H₀: “the click through rate is the same for the two designs”
+H₁: “the click through rate is higher for design B”
+
+This will be the first hyphotheses, afterwards we will test aggregate play duration, fraction of plays with short duration, fraction of content viewed etc. 
+
+Randomly select the users, and assign them to either the control group or the test group.
+We will start with selecting 1000 users for design A and 1000 users for design B.
+
+After the test is runned, the data is collected and we will start with the analysis.
+We will compare the succes rate for both groups, and to dubble check our result we will plot the distribution of our samples
+The result of our analysis only has two outcomes, users clicked on the movie or not, and therefore the plot will be binomial.
+
+After analyzing the two plots, we will compare both hypothesis 
+
+Afterwards we will run the test again but with a larger sample group, and check if the results seem to be the same. 
+If this seems to give the same result we will choose one of the two hypothesis, and if it seems that one design has an increase of the click through rate, we will have a further look into this design, as we might obtain an even better result after recreating this design again (we might draw new conclusions from this data analysis of preferences of our users that we didn't knew before). 
+
+This will continue untill we get our desired result
