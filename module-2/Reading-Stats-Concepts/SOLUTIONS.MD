@@ -65,14 +65,14 @@ So, take one single example in the articles you just read, which specific test/s
 >In this hyphotetical example a design change was made to the app, where we implemented a button 'Click here to discover cool games!', that was hown to 10% of users. 
 >
 >Steps that we need to take to design the experiment:
--Define the goal of the experiement: evaluate the the impact app design change on the target metric. Here we can state the null hyphothesis and alternative hyphothesis. Null hyphothesis - the design change has no impact on the conversion rate. Alternative hyphothesis - the design change does have the desired impact, that is the uplift in the conversion rate is at least 2%
--Define the target metric, in out case this would be share of users, who convert, or, in other words, reach the desired games; and let us call this metric 'conversion rate'. 
--Determine baseline conversion rate, which would be current share of users who reach the games.
--Determine the desired uplift which would be the desired increased of the conversion rate. For example, current conversion rate is 20% and we want it to be 35%.
--Choose control and test group. The size of test and control should be no less than a 1000 users each, but will also depend on factors like how fast do you want to be able to acceess the results of the test. For example if you have low traffic, then setting up large control and test groups means you will have to wait for a long time to access the results; scarcity of events - if the desired outcome is rare, you might want to have larger test and control so that the test results are meaninghful. Also, the minimum sample size can be accurately calculated based on the desired lift and statistical power of the hyphothesis test.
--Run the test that will serve assigned app designs to the test and control groups and collect the data on conversions for each user
--Calculate the onversion rates in each group
--Measure the different between the conversion rates in the test and control groups and evaluate if the difference is at least as extreme as the desired uplift by conducting statistical test for proportion difference and evaluating null hyphothesis against alternative hyphothesis.
+>-Define the goal of the experiement: evaluate the the impact app design change on the target metric. Here we can state the null hyphothesis and alternative hyphothesis. Null hyphothesis - the design change has no impact on the conversion rate. Alternative hyphothesis - the design change does have the desired impact, that is the uplift in the conversion rate is at least 2%
+>-Define the target metric, in out case this would be share of users, who convert, or, in other words, reach the desired games; and let us call this metric 'conversion rate'. 
+>-Determine baseline conversion rate, which would be current share of users who reach the games.
+>-Determine the desired uplift which would be the desired increased of the conversion rate. For example, current conversion rate is 20% and we want it to be 35%.
+>-Choose control and test group. The size of test and control should be no less than a 1000 users each, but will also depend on factors like how fast do you want to be able to acceess the results of the test. For example if you have low traffic, then setting up large control and test groups means you will have to wait for a long time to access the results; scarcity of events - if the desired outcome is rare, you might want to have larger test and control so that the test results are meaninghful. Also, the minimum sample size can be accurately calculated based on the desired lift and statistical power of the hyphothesis test.
+>-Run the test that will serve assigned app designs to the test and control groups and collect the data on conversions for each user
+>-Calculate the onversion rates in each group
+>-Measure the different between the conversion rates in the test and control groups and evaluate if the difference is at least as extreme as the desired uplift by conducting statistical test for proportion difference and evaluating null hyphothesis against alternative hyphothesis.
 >
 >In summary: 
 >The goal of the A/B test is to determine if implementation of this new 'Click here to discover cool games' leads to increased number of people reaching the desired games. To achieve this we will design a simple A/B test, that will test two alternatives - app design with the button and app design without the button and find out how the different designs impact the reach.
