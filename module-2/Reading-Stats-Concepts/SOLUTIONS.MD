@@ -74,5 +74,6 @@ So, take one single example in the articles you just read, which specific test/s
 -Calculate the onversion rates in each group
 -Measure the different between the conversion rates in the test and control groups and evaluate if the difference is at least as extreme as the desired uplift by conducting statistical test for proportion difference and evaluating null hyphothesis against alternative hyphothesis.
 >
->In summary: The goal of the A/B test is to determine if implementation of this new 'Click here to discover cool games' leads to increased number of people reaching the desired games. To achieve this we will design a simple A/B test, that will test two alternatives - app design with the button and app design without the button and find out how the different designs impact the reach.
+>In summary: 
+>The goal of the A/B test is to determine if implementation of this new 'Click here to discover cool games' leads to increased number of people reaching the desired games. To achieve this we will design a simple A/B test, that will test two alternatives - app design with the button and app design without the button and find out how the different designs impact the reach.
 
