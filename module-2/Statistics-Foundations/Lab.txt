@@ -1,0 +1,20 @@
+Expected value vs mean:
+
+-When working with samples we talk about expected value and when we work with total populations we talk about mean.
+In essence they calculate the same, but each time you take a sample and calculate the sample mean
+you might get a slightly different answer. That is why we calculate the sample mean over multiple different samples
+and then we take the average of all these sample means which gives us the expected value for the population mean.
+In conclusion the mean (of the population) is estimated by calculating the expected value which is the average of
+multiple sample means.
+
+The problem with p-values:
+
+-P values are easy to misinterpret. P-values merely show whether evidence against an hypothesis is weak or strong.
+Also this method is not 100% foolproof there will always be a chance where the contrary is true. Meaning that we
+can not 100% surely conclude that a certain hypothesis is right or wrong. We can easily fall pray to categorizing
+and due to the value of a p-value say whether an effect is significant or not and out of this conclude that there
+is no relation. This is a wrong and dangerous conclusion.
+In conclusion, always keep the weak spots of your research and test statistics in mind and mention them.
+
+
+
