@@ -42,7 +42,7 @@ To do this, is very important first to design our experiment.
 One example:
 Our application has a lot of mini-games. We want people to reach the games that we think are the best but the behaviour is not the expected, they don't reach them.
 
-So we call a designer and after a lot of work he shows us a new design for our application: we will add a botton specific for that kinf of games inviting the users to click on it:
+So we call a designer and after a lot of work he shows us a new design for our application: we will add a button specific for that kinf of games inviting the users to click on it:
 
 *Click here to discover cool games!*
 
@@ -59,3 +59,22 @@ Read more about A/B testing with a couple of examples:
 [A cool general explanation](http://arts.show/tested7)
 
 So, take one single example in the articles you just read, which specific test/s would you apply? (We want you just to do a draft and think a little bit how to apply the tests you already know in this case)
+
+For the BaseCamp example: 
+
+This is a two sample hypotesis test, both sample are independant, I would thus use
+
+from scipy.stats import ttest_ind
+
+# INDEPENDENT samples: we look at the difference of the means
+# mu(after) - mu(before)
+# H0: there is no difference
+# H1: there is a difference
+
+# equal variance
+ttest_ind(ab_test.a, ab_test.brel, equal_var=True)
+
+
+
+
+
