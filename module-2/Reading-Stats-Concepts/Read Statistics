@@ -62,8 +62,14 @@ So, take one single example in the articles you just read, which specific test/s
 
 For the BaseCamp example: 
 
-This is a two sample hypotesis test, both sample are independant, I would thus use
+BaseCamp should have used a two sample hypotesis test on the following independant samples: 
+- sample 1: website before the redesign of BaseCamp (e.g. removing the signup form from the homepage)
+- sample 2: website after the redesign of BaseCamp (e.g. removing the signup form from the homepage)
 
+
+They could have used the ttest_ind function and look at the difference of the means. This test should have been done either before lauching the changes on a sample, or a couple weeks after the changes in order to caught the lower performance of the redesign.
+
+How to apply:
 from scipy.stats import ttest_ind
 
 # INDEPENDENT samples: we look at the difference of the means
@@ -72,7 +78,7 @@ from scipy.stats import ttest_ind
 # H1: there is a difference
 
 # equal variance
-ttest_ind(ab_test.a, ab_test.brel, equal_var=True)
+ttest_ind(basecamp_test.a, basecamp_test.b, equal_var=True)
 
 
 
