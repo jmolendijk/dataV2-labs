@@ -16,5 +16,11 @@ and due to the value of a p-value say whether an effect is significant or not an
 is no relation. This is a wrong and dangerous conclusion.
 In conclusion, always keep the weak spots of your research and test statistics in mind and mention them.
 
+A/B testing:
+
+A/B testing is used to test out possible new features in games, apps, websites, online ads etc.
+Most of the times a % of the users will get to see the new implemented feature and another % of the users will not.
+The company in charge of the A/B testing does this to see what the effects of the possible new feature would be.
+
 
 
