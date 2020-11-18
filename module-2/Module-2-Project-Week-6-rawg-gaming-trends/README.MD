@@ -1,6 +1,6 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
-## [**Module 2 Project 2**] **Video Games Trends of the Noughties**
+## [**Module 2 Capstone Project**] **Video Games Trends of the Noughties**
 
 
 ## Introduction
