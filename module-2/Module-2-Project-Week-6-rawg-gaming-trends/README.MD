@@ -13,7 +13,7 @@ Video games industry has gone through the exponential growth since end of the 20
 - Are visually similar games similarly popular in terms of ratings, videos, reviews etc?
 ### Acknowledgements
 
-**`video-game-encyclopedia`** folder contains dataset extraction code published by [Trung Hoang at Kaggle](https://www.kaggle.com/jummyegg/rawg-game-dataset) and extracts video games and tag info data from [RAWG Video Game Online Database](https://rawg.io/apidocs)
+**`data`** folder contains dataset extraction code published by [Trung Hoang at Kaggle](https://www.kaggle.com/jummyegg/rawg-game-dataset) and extracts video games and tag info data from [RAWG Video Game Online Database](https://rawg.io/apidocs)
 
 
 ### Getting Started
@@ -35,3 +35,5 @@ Upon completion, add your deliverables to git. Then commit git and push your bra
 [Video Game Dataset](https://www.kaggle.com/jummyegg/rawg-game-dataset)
 
 [RAWG Video Game Online Database](https://rawg.io/apidocs)
+
+[trung-hn / video-game-encyclopedia](https://github.com/trung-hn/video-game-encyclopedia)
