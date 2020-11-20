@@ -1,0 +1,593 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1018.2303                               -->
+<workbook source-build='2020.3.2 (20203.20.1018.2303)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Happiness_freedom' inline='true' name='federated.1x1dwv91k0hepq13b900f0dj8ywz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Happiness_freedom' name='textscan.0rw5miv03e50ba12wnhd40fiki9e'>
+            <connection class='textscan' directory='/Users/VV/dataV2-labs/module-2/Final-Project' filename='Happiness_freedom.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0rw5miv03e50ba12wnhd40fiki9e' name='Happiness_freedom.csv' table='[Happiness_freedom#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='fr_BE' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Country' ordinal='1' />
+            <column datatype='integer' name='Happiness Rank' ordinal='2' />
+            <column datatype='string' name='Happiness Score' ordinal='3' />
+            <column datatype='string' name='Lower Confidence Interval' ordinal='4' />
+            <column datatype='string' name='Upper Confidence Interval' ordinal='5' />
+            <column datatype='string' name='Economy (GDP per Capita)' ordinal='6' />
+            <column datatype='string' name='Family' ordinal='7' />
+            <column datatype='string' name='Health (Life Expectancy)' ordinal='8' />
+            <column datatype='string' name='Freedom' ordinal='9' />
+            <column datatype='string' name='Generosity' ordinal='10' />
+            <column datatype='string' name='Trust (Government Corruption)' ordinal='11' />
+            <column datatype='string' name='Dystopia Residual' ordinal='12' />
+            <column datatype='integer' name='Year' ordinal='13' />
+            <column datatype='string' name='Region' ordinal='14' />
+            <column datatype='string' name='Standard Error' ordinal='15' />
+            <column datatype='string' name='freedom_categ' ordinal='16' />
+            <column datatype='string' name='happiness_categ' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0rw5miv03e50ba12wnhd40fiki9e' name='Happiness_freedom.csv' table='[Happiness_freedom#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='fr_BE' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Country' ordinal='1' />
+            <column datatype='integer' name='Happiness Rank' ordinal='2' />
+            <column datatype='string' name='Happiness Score' ordinal='3' />
+            <column datatype='string' name='Lower Confidence Interval' ordinal='4' />
+            <column datatype='string' name='Upper Confidence Interval' ordinal='5' />
+            <column datatype='string' name='Economy (GDP per Capita)' ordinal='6' />
+            <column datatype='string' name='Family' ordinal='7' />
+            <column datatype='string' name='Health (Life Expectancy)' ordinal='8' />
+            <column datatype='string' name='Freedom' ordinal='9' />
+            <column datatype='string' name='Generosity' ordinal='10' />
+            <column datatype='string' name='Trust (Government Corruption)' ordinal='11' />
+            <column datatype='string' name='Dystopia Residual' ordinal='12' />
+            <column datatype='integer' name='Year' ordinal='13' />
+            <column datatype='string' name='Region' ordinal='14' />
+            <column datatype='string' name='Standard Error' ordinal='15' />
+            <column datatype='string' name='freedom_categ' ordinal='16' />
+            <column datatype='string' name='happiness_categ' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_BE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Happiness Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Happiness Rank]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Happiness Rank</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Happiness Score</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Happiness Score]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Happiness Score</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lower Confidence Interval</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lower Confidence Interval]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Lower Confidence Interval</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Upper Confidence Interval</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Upper Confidence Interval]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Upper Confidence Interval</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Economy (GDP per Capita)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Economy (GDP per Capita)]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Economy (GDP per Capita)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Family</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Family]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Family</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Health (Life Expectancy)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Health (Life Expectancy)]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Health (Life Expectancy)</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Freedom</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Freedom]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Freedom</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Generosity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Generosity]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Generosity</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trust (Government Corruption)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Trust (Government Corruption)]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Trust (Government Corruption)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dystopia Residual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Dystopia Residual]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Dystopia Residual</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Standard Error</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Standard Error]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>Standard Error</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>freedom_categ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[freedom_categ]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>freedom_categ</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>happiness_categ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[happiness_categ]</local-name>
+            <parent-name>[Happiness_freedom.csv]</parent-name>
+            <remote-alias>happiness_categ</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Happiness_freedom.csv' datatype='table' name='[__tableau_internal_object_id__].[Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD]' role='measure' type='quantitative' />
+      <column datatype='string' name='[freedom_categ]' role='dimension' type='nominal' />
+      <column datatype='string' name='[happiness_categ]' role='dimension' type='nominal' />
+      <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+      <column-instance column='[freedom_categ]' derivation='None' name='[none:freedom_categ:nk]' pivot='key' type='nominal' />
+      <column-instance column='[happiness_categ]' derivation='None' name='[none:happiness_categ:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[Inclusions (Country,happiness_categ)]' name-style='unqualified' user:auto-column='include'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Country:nk]' />
+          <groupfilter function='level-members' level='[none:happiness_categ:nk]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:freedom_categ:nk]' type='palette'>
+            <map to='#52b61a'>
+              <bucket>&quot;High&quot;</bucket>
+            </map>
+            <map to='#d20000'>
+              <bucket>&quot;Low&quot;</bucket>
+            </map>
+            <map to='#dd8400'>
+              <bucket>&quot;Medium&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:happiness_categ:nk]' type='palette'>
+            <map to='#23a800'>
+              <bucket>&quot;High&quot;</bucket>
+            </map>
+            <map to='#f0a500'>
+              <bucket>&quot;Medium&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Belgique&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Happiness_freedom.csv' id='Happiness_freedom.csv_DD4A6CB722324CBD84778D2585A161CD'>
+            <properties context=''>
+              <relation connection='textscan.0rw5miv03e50ba12wnhd40fiki9e' name='Happiness_freedom.csv' table='[Happiness_freedom#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_BE' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='Country' ordinal='1' />
+                  <column datatype='integer' name='Happiness Rank' ordinal='2' />
+                  <column datatype='string' name='Happiness Score' ordinal='3' />
+                  <column datatype='string' name='Lower Confidence Interval' ordinal='4' />
+                  <column datatype='string' name='Upper Confidence Interval' ordinal='5' />
+                  <column datatype='string' name='Economy (GDP per Capita)' ordinal='6' />
+                  <column datatype='string' name='Family' ordinal='7' />
+                  <column datatype='string' name='Health (Life Expectancy)' ordinal='8' />
+                  <column datatype='string' name='Freedom' ordinal='9' />
+                  <column datatype='string' name='Generosity' ordinal='10' />
+                  <column datatype='string' name='Trust (Government Corruption)' ordinal='11' />
+                  <column datatype='string' name='Dystopia Residual' ordinal='12' />
+                  <column datatype='integer' name='Year' ordinal='13' />
+                  <column datatype='string' name='Region' ordinal='14' />
+                  <column datatype='string' name='Standard Error' ordinal='15' />
+                  <column datatype='string' name='freedom_categ' ordinal='16' />
+                  <column datatype='string' name='happiness_categ' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Feuille 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Freedom of choice</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Happiness_freedom' name='federated.1x1dwv91k0hepq13b900f0dj8ywz' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1x1dwv91k0hepq13b900f0dj8ywz'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[freedom_categ]' role='dimension' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[freedom_categ]' derivation='None' name='[none:freedom_categ:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Longitude (generated)]' field-type='quantitative' max='21325188.639871955' min='-21952809.829081155' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Latitude (generated)]' field-type='quantitative' max='20475146.212454587' min='-8706589.7064143457' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[none:Country:nk]' />
+              <geometry column='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Geometry (generated)]' />
+              <color column='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[none:freedom_categ:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Latitude (generated)]</rows>
+        <cols>[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{3C2C206C-1EDE-4DDD-81B3-4CD151404821}' />
+    </worksheet>
+    <worksheet name='Feuille 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Happiness</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Happiness_freedom' name='federated.1x1dwv91k0hepq13b900f0dj8ywz' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1x1dwv91k0hepq13b900f0dj8ywz'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[happiness_categ]' role='dimension' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[happiness_categ]' derivation='None' name='[none:happiness_categ:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[none:happiness_categ:nk]' />
+              <lod column='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[none:Country:nk]' />
+              <geometry column='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Latitude (generated)]</rows>
+        <cols>[federated.1x1dwv91k0hepq13b900f0dj8ywz].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E45DB66B-A070-46AB-B32E-C03EB5F8FC6D}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Feuille 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[none:freedom_categ:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{EFF3AAC0-680F-45F1-A92B-4544B897746F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Feuille 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.1x1dwv91k0hepq13b900f0dj8ywz].[none:happiness_categ:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A13323D7-364D-40E4-860E-2E5D4A15626A}' />
+    </window>
+  </windows>
+</workbook>
