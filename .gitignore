@@ -1,2 +1,5 @@
 
 module-1/Project2--Amsterdam-Data-Anlytics/
+*.csv
+module-3/Natural-Language-Processing/.ipynb_checkpoints/L. W8D3 NLTK-checkpoint.ipynb
+module-3/Natural-Language-Processing/L. W8D3 NLTK.ipynb
