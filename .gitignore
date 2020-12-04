@@ -1,0 +1,4 @@
+main-checkpoint.ipynb
+*.DS_Store
+**/*ipynb_checkpoints
+module-3/Natural-Language-Processing/Sentiment140.csv
