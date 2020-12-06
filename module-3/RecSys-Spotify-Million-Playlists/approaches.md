@@ -1,4 +1,4 @@
-### Collaborative filtering
+### Collaborative filtering 
 [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering): This method makes automatic predictions (filtering) about the interests of a user by collecting preferences or taste information from many users (collaborating). The underlying assumption of the collaborative filtering approach is that if a person A has the same opinion as a person B on a set of items, A is more likely to have B's opinion for a given item than that of a randomly chosen person.
 > - Matrix Factorization (select top relevant items)
 > - learning to Rank (rank relevant items)
@@ -14,7 +14,7 @@
 > - Based on similarities on the audio features and  
 > - learning to Rank (rank relevant items)
 >
-> CB Set up:
+> CB Set up
 > - Content profile is track profile based on audio features and user profile is the PID profile, based on the seed tracks.
 > - `user` : playlist
 > - `items` : tracks
