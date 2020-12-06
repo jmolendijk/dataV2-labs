@@ -1,5 +1,4 @@
-/data/
+/data-processed/
 /credentials
 /dataset/
 /Kaggle-RecSys-101/
-.ipynb_checkpoints
