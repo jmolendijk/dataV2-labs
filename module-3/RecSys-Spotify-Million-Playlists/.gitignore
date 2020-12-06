@@ -1,4 +1,6 @@
 /data/
 /dataset/
 /data-processing-notebooks/credentials.ipynb
+/data-processing-notebooks/.ipynb_checkpoints/
 /Kaggle-RecSys-101/
+.ipynb_checkpoints
