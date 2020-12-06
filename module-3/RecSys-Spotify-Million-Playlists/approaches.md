@@ -24,7 +24,7 @@
 
 ### Evaluation
 Use known information retrival systems evaluation metrics
-[Notebook](https://github.com/IrynaHorova/dataV2-labs/blob/master/module-3/RecSys-Spotify-Million-Playlists/notebooks/evaluation.ipynb) and the [Original Challenge Defintions](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge#evaluation)
+[Notebook](https://github.com/IrynaHorova/dataV2-labs/blob/master/module-3/RecSys-Spotify-Million-Playlists/modeling-notebooks/evaluation-NDCG-R-Precision.ipynb) and the [Original Challenge Defintions](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge#evaluation)
 
 > - `R-procesion`  measures the number of retrieved relevant tracks divided by the number of known relevant tracks (i.e., the number of withheld tracks)
 > - `Normalised Discounted Cumulative Gain (NDGS)`  Discounted Cumulative Gain (DCG) measures the ranking quality of the recommended tracks, increasing when relevant tracks are placed higher in the list. Normalized DCG (NDCG) is determined by calculating the DCG and dividing it by the ideal DCG in which the recommended tracks are perfectly ranked
