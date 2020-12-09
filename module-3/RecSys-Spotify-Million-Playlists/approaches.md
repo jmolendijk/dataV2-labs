@@ -29,3 +29,5 @@ Use known information retrival systems evaluation metrics
 > - `R-procesion`  measures the number of retrieved relevant tracks divided by the number of known relevant tracks (i.e., the number of withheld tracks)
 > - `Normalised Discounted Cumulative Gain (NDGS)`  Discounted Cumulative Gain (DCG) measures the ranking quality of the recommended tracks, increasing when relevant tracks are placed higher in the list. Normalized DCG (NDCG) is determined by calculating the DCG and dividing it by the ideal DCG in which the recommended tracks are perfectly ranked
 > - `Optional` [Recommended Song Clicks](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge#evaluation) is the number of refreshes needed before a relevant track is encountered
+
+> - original data set is split into pseudo train and test, where train playlists are taken as is and hold out tracks (Ground truth) are removed from test playlists. This data set is then passed to recommendation models, and the `R-procesion` amd NDGS is calculated against the Ground truth
