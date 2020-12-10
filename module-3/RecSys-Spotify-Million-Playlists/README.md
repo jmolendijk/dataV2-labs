@@ -46,50 +46,16 @@ Use known information retrival systems evaluation metrics
 > - original data set is split into pseudo train and test, where train playlists are taken as is and hold out tracks (Ground truth) are removed from test playlists. This data set is then passed to recommendation models, and the `R-procesion` amd NDGS is calculated against the Ground truth
 
 ## Project Organization
-
-   
+  
 ```RecSys-Spotify-Million-Playlists/
 ├── .gitignore
 ├── APPROACHES.md
 ├── credentials/
-│   └── credentials.ipynb
 ├── data-processing-notebooks/
-│   ├── collaborative-filtering-data-preparation-scale-down.ipynb
-│   ├── collaborative-filtering-data-preparation.ipynb
-│   ├── dictionaries_tracks_desc_pids.ipynb
-│   ├── explore-with-provided-scripts.ipynb
-│   ├── mpd-slice-combine.ipynb
-│   ├── spotify-track-api.ipynb
-│   └── track-uri-combine.ipynb
 ├── evaluation/
-│   ├── ALS_binary_topn_500_100.csv
-│   ├── ALS_binary_topn_500_10000.csv
-│   ├── ALS_pos_topn_500_10000.csv
-│   ├── CB_audio_features_1.csv
-│   ├── CB_audio_features_10.csv
-│   ├── CB_audio_features_1000.csv
-│   ├── SVD_binary100_10000.csv
-│   ├── SVD_binary50_10000.csv
-│   ├── SVD_pos100_10000.csv
-│   └── SVD_pos50_10000.csv
-├── Make tree.ipynb
 ├── modeling-notebooks/
-│   ├── CB00_Audio_features_full_data.ipynb
-│   ├── CF00_Model_Surprise_50pct_sample.ipynb
-│   ├── CF00_Model_Surprise_scaled_down.ipynb
-│   ├── CF01_Memory_based_scaled_down.ipynb
-│   ├── CF02_Model_ALS_Implicit_binary_full_data.ipynb
-│   ├── CF02_Model_ALS_Implicit_pos_full_data.ipynb
-│   ├── CF03_Model_SVD_sparse_matrix_binary_ratings .ipynb
-│   ├── CF03_Model_SVD_sparse_matrix_pos_ratings.ipynb
-│   ├── evaluation.ipynb
-│   ├── tenor.gif
-│   └── Untitled.ipynb
 ├── README.md
 └── src/
-    └── __pycache__/
-        └── imp.cpython-38.pyc
-
 
 
 ## Resources
