@@ -47,9 +47,10 @@ Use known information retrival systems evaluation metrics
 
 ## Project Organization
 
-    RecSys-Spotify-Million-Playlists/
-??? .gitignore
-??? APPROACHES.md <- ddd
+
+```RecSys-Spotify-Million-Playlists/
+|-- .gitignore
+|-- APPROACHES.md
 ??? credentials/
 ?   ??? credentials.ipynb
 ??? data-processing-notebooks/
@@ -88,6 +89,7 @@ Use known information retrival systems evaluation metrics
 ??? src/
     ??? __pycache__/
         ??? imp.cpython-38.pyc
+<pre>
 
 ## Resources
 
