@@ -49,9 +49,9 @@ Use known information retrival systems evaluation metrics
 
 
 ```RecSys-Spotify-Million-Playlists/
-|-- .gitignore
-|-- APPROACHES.md
-??? credentials/
+```??? .gitignore
+```??? APPROACHES.md
+```??? credentials/
 ?   ??? credentials.ipynb
 ??? data-processing-notebooks/
 ?   ??? collaborative-filtering-data-preparation-scale-down.ipynb
@@ -89,7 +89,7 @@ Use known information retrival systems evaluation metrics
 ??? src/
     ??? __pycache__/
         ??? imp.cpython-38.pyc
-<pre>
+```
 
 ## Resources
 
