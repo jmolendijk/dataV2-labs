@@ -47,7 +47,7 @@ Use known information retrival systems evaluation metrics
 
 ## Project Organization
 
-    ??? README.md          <- The top-level README for developers using this project.
+    |-- README.md          <- The top-level README for developers using this project.
     ??? data
     ?   ??? interm         <- Intermediate data that has been transformed
     ?   ??? processed      <- The final, canonical data sets for modeling
