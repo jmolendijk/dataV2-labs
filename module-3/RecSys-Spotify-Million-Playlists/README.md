@@ -47,43 +47,47 @@ Use known information retrival systems evaluation metrics
 
 ## Project Organization
 
-    |-- README.md          <- The top-level README for developers using this project.
-    ??? data
-    ?   ??? interm         <- Intermediate data that has been transformed
-    ?   ??? processed      <- The final, canonical data sets for modeling
-    ?   ??? raw            <- The original, immutable data dump
-    ?
-    ??? guide              <- A set of markdown files with documented best practices, guidelines and rools for collaborative projects
-    ?
-    ??? models             <- Trained and serialized models, model predictions, or model summaries
-    ?
-    ??? notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    ?                         the creator's initials, and a short `-` delimited description, e.g
-    ?                         `1.0-jqp-initial-data-exploration`
-    ?
-    ??? references         <- Data dictionaries, manuals, and all other explanatory materials.
-    ?
-    ??? reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    ?   ??? figures        <- Generated graphics and figures to be used in reporting
-    ?
-    ??? requirements.txt   <- The requirements file for reproducing the analysis environment
-    ?
-    ??? da-project         <- Source code for use in this project.
-        ?
-        ??? data           <- Scripts to download or generate data
-        ?   ??? make_dataset.py
-        ?
-        ??? features       <- Scripts to turn raw data into features for modeling
-        ?   ??? build_features.py
-        ?
-        ??? models         <- Scripts to train models and then use trained models to make
-        ?   ?                 predictions
-        ?   ??? predict_model.py
-        ?   ??? train_model.py
-        ?
-        ??? visualization  <- Scripts to create exploratory and results oriented visualizations
-            ??? visualize.py
-
+    RecSys-Spotify-Million-Playlists/
+??? .gitignore
+??? APPROACHES.md <- ddd
+??? credentials/
+?   ??? credentials.ipynb
+??? data-processing-notebooks/
+?   ??? collaborative-filtering-data-preparation-scale-down.ipynb
+?   ??? collaborative-filtering-data-preparation.ipynb
+?   ??? dictionaries_tracks_desc_pids.ipynb
+?   ??? explore-with-provided-scripts.ipynb
+?   ??? mpd-slice-combine.ipynb
+?   ??? spotify-track-api.ipynb
+?   ??? track-uri-combine.ipynb
+??? evaluation/
+?   ??? ALS_binary_topn_500_100.csv
+?   ??? ALS_binary_topn_500_10000.csv
+?   ??? ALS_pos_topn_500_10000.csv
+?   ??? CB_audio_features_1.csv
+?   ??? CB_audio_features_10.csv
+?   ??? CB_audio_features_1000.csv
+?   ??? SVD_binary100_10000.csv
+?   ??? SVD_binary50_10000.csv
+?   ??? SVD_pos100_10000.csv
+?   ??? SVD_pos50_10000.csv
+??? Make tree.ipynb
+??? modeling-notebooks/
+?   ??? CB00_Audio_features_full_data.ipynb
+?   ??? CF00_Model_Surprise_50pct_sample.ipynb
+?   ??? CF00_Model_Surprise_scaled_down.ipynb
+?   ??? CF01_Memory_based_scaled_down.ipynb
+?   ??? CF02_Model_ALS_Implicit_binary_full_data.ipynb
+?   ??? CF02_Model_ALS_Implicit_pos_full_data.ipynb
+?   ??? CF03_Model_SVD_sparse_matrix_binary_ratings .ipynb
+?   ??? CF03_Model_SVD_sparse_matrix_pos_ratings.ipynb
+?   ??? evaluation.ipynb
+?   ??? tenor.gif
+?   ??? Untitled.ipynb
+??? README.md
+??? src/
+    ??? __pycache__/
+        ??? imp.cpython-38.pyc
 
 ## Resources
 
