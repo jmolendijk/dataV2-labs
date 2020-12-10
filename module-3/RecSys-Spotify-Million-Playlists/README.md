@@ -45,8 +45,7 @@ Use known information retrival systems evaluation metrics
 
 > - original data set is split into pseudo train and test, where train playlists are taken as is and hold out tracks (Ground truth) are removed from test playlists. This data set is then passed to recommendation models, and the `R-procesion` amd NDGS is calculated against the Ground truth
 
-##Project Organization
-------------
+## Project Organization
 
     ??? README.md          <- The top-level README for developers using this project.
     ??? data
