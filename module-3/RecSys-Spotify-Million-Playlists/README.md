@@ -46,9 +46,6 @@ Use known information retrival systems evaluation metrics
 ## Project Organization
   
 ```RecSys-Spotify-Million-Playlists/
-├── .gitignore
-├── APPROACHES.md
-├── credentials/
 ├── data-processing-notebooks/
 ├── evaluation/
 ├── modeling-notebooks/
