@@ -56,17 +56,24 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 
 [3] [Spotify Web API](https://developer.spotify.com/console/)
 
-[4] [Spotify Sentiment Analysis](https://towardsdatascience.com/spotify-sentiment-analysis-8d48b0a492f2)
+[4] [Recommender system](https://en.wikipedia.org/wiki/Recommender_system)
 
-[5] [Recommender Systems in Python 101](https://www.kaggle.com/gspmoreira/recommender-systems-in-python-101)
+[5] [Introduction to recommender systems](https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada)
 
-[6] [Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
+[6] [Playlists: Good Or Bad For Musicians?](https://output.com/blog/playlists-good-or-bad-for-musicians#:~:text=Playlists%20accounted%20for%2031%25%20of,listener%20survey%20conducted%20in%202016.&text=Meanwhile%2C%20streaming%20once%20again%20soared,audio%20streams%20over%20last%20year.%E2%80%9D)
 
-[7] [How to Build a Memory-Based Recommendation System using Python Surprise](https://towardsdatascience.com/how-to-build-a-memory-based-recommendation-system-using-python-surprise-55f3257b2cf4)
+[7] [Spotify Sentiment Analysis](https://towardsdatascience.com/spotify-sentiment-analysis-8d48b0a492f2)
 
-[8] [How to Build a Model-Based Recommendation System using Python Surprise](https://towardsdatascience.com/how-to-build-a-model-based-recommendation-system-using-python-surprise-2df3b77ab3e5)
+[8] [Recommender Systems in Python 101](https://www.kaggle.com/gspmoreira/recommender-systems-in-python-101)
 
-[9] [ALS Implicit Collaborative Filtering](https://medium.com/radon-dev/als-implicit-collaborative-filtering-5ed653ba39fe)
+[9] [Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
 
-[10] [Playlists: Good Or Bad For Musicians?](https://output.com/blog/playlists-good-or-bad-for-musicians#:~:text=Playlists%20accounted%20for%2031%25%20of,listener%20survey%20conducted%20in%202016.&text=Meanwhile%2C%20streaming%20once%20again%20soared,audio%20streams%20over%20last%20year.%E2%80%9D)
+[10] [How to Build a Memory-Based Recommendation System using Python Surprise](https://towardsdatascience.com/how-to-build-a-memory-based-recommendation-system-using-python-surprise-55f3257b2cf4)
 
+[11] [How to Build a Model-Based Recommendation System using Python Surprise](https://towardsdatascience.com/how-to-build-a-model-based-recommendation-system-using-python-surprise-2df3b77ab3e5)
+
+[12] [ALS Implicit Collaborative Filtering](https://medium.com/radon-dev/als-implicit-collaborative-filtering-5ed653ba39fe)
+
+[13] [Beginner Tutorial: Recommender Systems in Python](https://www.datacamp.com/community/tutorials/recommender-systems-python)
+
+[14] [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
