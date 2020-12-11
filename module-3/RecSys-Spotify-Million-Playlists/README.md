@@ -51,4 +51,5 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
   
 
 [1] [C.W. Chen, P. Lamere, M. Schedl, and H. Zamani. Recsys Challenge 2018: Automatic Music Playlist Continuation. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ’18), 2018. ](https://arxiv.org/pdf/1810.01520.pdf)
+
 [2] [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
