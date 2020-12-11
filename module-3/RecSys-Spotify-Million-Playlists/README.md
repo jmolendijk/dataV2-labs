@@ -4,10 +4,7 @@
 inspired by [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Introduction
-
-xxxx
-
-## Approaches
+xxx
 
 ### Getting Started
 
