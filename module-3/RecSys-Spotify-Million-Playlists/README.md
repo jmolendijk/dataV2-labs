@@ -6,15 +6,15 @@ inspired by [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com
 ## Introduction
 xxx
 
-### Task
+## Task
 
 In this project I have applied Content Based filtering and collaborative filtering to solve the task of automatic playlist creation based on first n tracks from a palylist or n randomly selected items from a playlist.
 
-### Dataset
+## Dataset
 
 Dataset comes from original [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
-### Models
+## Models
 The project used collaboartive filtering and content based filtering as two main approaches that were tested
 
 #### Collaborative filtering 
@@ -25,7 +25,7 @@ The project used collaboartive filtering and content based filtering as two main
 [Content-Based Filtering](http://recommender-systems.org/content-based-filtering/): This method uses only information about the description and attributes of the items users has previously consumed to model user's preferences. In other words, these algorithms try to recommend items that are similar to those that a user liked in the past (or is examining in the present). In particular, various candidate items are compared with items previously rated by the user and the best-matching items are recommended.
 
 
-### Evaluation
+## Evaluation
 Two information retrival systems evaluation metrics were used, partially following the set up from the original challenge.
 [Notebook](https://github.com/IrynaHorova/dataV2-labs/blob/master/module-3/RecSys-Spotify-Million-Playlists/modeling-notebooks/evaluation-NDCG-R-Precision.ipynb) and the [Original Challenge Definitions](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge#evaluation).
 To complete the evaluation, data set is split into pseudo train and test sets. Each playlist in the test set is split into two subsets: seed tracks and hold-out, or ground thruth, tracks. Train playlists and test playlists containing only seed tracks are used to train the models. Test playlists containing only seed tracks are then used to obtain recommendations from the models. The `R-procesion` and `NDCG` of the obtained recommendation is calculated against the Ground truth
