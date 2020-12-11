@@ -53,3 +53,20 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 [1] [C.W. Chen, P. Lamere, M. Schedl, and H. Zamani. Recsys Challenge 2018: Automatic Music Playlist Continuation. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ’18), 2018. ](https://arxiv.org/pdf/1810.01520.pdf)
 
 [2] [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
+
+[3] [Spotify Web API](https://developer.spotify.com/console/)
+
+[4] [Spotify Sentiment Analysis](https://towardsdatascience.com/spotify-sentiment-analysis-8d48b0a492f2)
+
+[5] [Recommender Systems in Python 101](https://www.kaggle.com/gspmoreira/recommender-systems-in-python-101)
+
+[6] [Evaluate your Recommendation Engine using NDCG](https://towardsdatascience.com/evaluate-your-recommendation-engine-using-ndcg-759a851452d1)
+
+[7] [How to Build a Memory-Based Recommendation System using Python Surprise](https://towardsdatascience.com/how-to-build-a-memory-based-recommendation-system-using-python-surprise-55f3257b2cf4)
+
+[8] [How to Build a Model-Based Recommendation System using Python Surprise](https://towardsdatascience.com/how-to-build-a-model-based-recommendation-system-using-python-surprise-2df3b77ab3e5)
+
+[9] [ALS Implicit Collaborative Filtering](https://medium.com/radon-dev/als-implicit-collaborative-filtering-5ed653ba39fe)
+
+[10] [Playlists: Good Or Bad For Musicians?](https://output.com/blog/playlists-good-or-bad-for-musicians#:~:text=Playlists%20accounted%20for%2031%25%20of,listener%20survey%20conducted%20in%202016.&text=Meanwhile%2C%20streaming%20once%20again%20soared,audio%20streams%20over%20last%20year.%E2%80%9D)
+
