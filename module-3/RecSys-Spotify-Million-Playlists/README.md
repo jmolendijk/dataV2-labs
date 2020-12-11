@@ -9,6 +9,7 @@ People love playlist. Spotify reported that their users have generated over 4 bn
 Playlists carry benefist for consumers by providing personalised music discoverya and recommedations for various occasions, moods and themes.
 The importance of playlist for the music industry is also paramount, covering use cases like consumer engagement improvement, increased playtime, music search, but also helping less known artist get discovered though automatically generated playlists.
 
+
 ## Task
 
 In this project I have applied Content Based filtering and collaborative filtering to solve the task of automatic playlist creation based on first n tracks from a palylist or n randomly selected items from a playlist.
@@ -23,13 +24,28 @@ The project used collaboartive filtering and content based filtering as two main
 #### Collaborative filtering 
 [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering): This method makes automatic predictions (filtering) about the interests of a user by collecting preferences or taste information from many users (collaborating). The underlying assumption of the collaborative filtering approach is that if a person A has the same opinion as a person B on a set of items, A is more likely to have B's opinion for a given item than that of a randomly chosen person.
 
+Notebooks:
++ Memory based: `modeling-notebooks/CF00_Memory_based_scaled_down.ipynb`
++ Model based:
+  - Surprise
+     - `modeling-notebooks/CF01_Model_Surprise_50pct_sample.ipynb`
+     - `modeling-notebooks/CF01_Model_Surprise_scaled_down.ipynb`
+     - `modeling-notebooks/CF01_Model_Surprise_scaled_down.ipynb`
+   - Alternating Least Squares with Implicit
+     - `modeling-notebooks/F02_Model_ALS_Implicit_binary.ipynb`
+     - `modeling-notebooks/CF02_Model_ALS_Implicit_pos.ipynb`
+     - `modeling-notebooks/CF02_Model_ALS_Implicit_pos_full_data.ipynb`
+   - SVD
+     - `modeling-notebooks/CF03_Model_SVD_sparse_matrix_binary_ratings.ipynb`
+     - `modeling-notebooks/CF03_Model_SVD_sparse_matrix_pos_ratings.ipynb`
+
 #### Content based filtering
 [Content-Based Filtering](http://recommender-systems.org/content-based-filtering/): This method uses only information about the description and attributes of the items users has previously consumed to model user's preferences. In other words, these algorithms try to recommend items that are similar to those that a user liked in the past (or is examining in the present). In particular, various candidate items are compared with items previously rated by the user and the best-matching items are recommended.
 
 Notebooks:
-- `modeling-notebooks/CB00_audio_features.ipynb`
-- WIP: `modeling-notebooks/CB01_Audio_features_genres_data_preparation.ipynb`
-- WIP: `modeling-notebooks/CB01_Audio_features_genres_model.ipynb`
+* `modeling-notebooks/CB00_audio_features.ipynb`
+* WIP: `modeling-notebooks/CB01_Audio_features_genres_data_preparation.ipynb`
+* WIP: `modeling-notebooks/CB01_Audio_features_genres_model.ipynb`
 
 
 ## Evaluation
@@ -81,3 +97,5 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 [13] [Beginner Tutorial: Recommender Systems in Python](https://www.datacamp.com/community/tutorials/recommender-systems-python)
 
 [14] [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
+
+[15] [Brief presentation](https://docs.google.com/presentation/d/1GBnqPl0b1Ac3_QWGC6Eocld1V8suD4AB-b2WnETOtj0/edit?usp=sharing)
