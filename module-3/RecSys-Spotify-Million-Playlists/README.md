@@ -1,16 +1,17 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
-# Lab | Neural Networks
+# Automatic playlist continuation
+inspired by [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Introduction
 
-This lab will let you practice performing neural network analysis. It will also introduce you additional concepts in neural network analysis and Tensorflow. You will be introduced to a web tool called [Tensorflow Playground](http://playground.tensorflow.org) with which you can play with and learn about the hyperparameters of Tensorflow.
+xxxx
 
 ## Approaches
 
 ### Getting Started
 
-Complete Challenge 1, 2, and Bonus (optional) in order. Follow the instructions and add your code and explanations as necessary.
+xxx
 
 ### Collaborative filtering 
 [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering): This method makes automatic predictions (filtering) about the interests of a user by collecting preferences or taste information from many users (collaborating). The underlying assumption of the collaborative filtering approach is that if a person A has the same opinion as a person B on a set of items, A is more likely to have B's opinion for a given item than that of a randomly chosen person.
