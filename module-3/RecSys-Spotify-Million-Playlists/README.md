@@ -29,7 +29,7 @@ The project used collaboartive filtering and content based filtering as two main
 Notebooks:
 - `modeling-notebooks/CB00_audio_features.ipynb`
 - WIP: `modeling-notebooks/CB01_Audio_features_genres_data_preparation.ipynb`
-- WIP: `modeling-notebooks/CCB01_Audio_features_genres_model.ipynb`
+- WIP: `modeling-notebooks/CB01_Audio_features_genres_model.ipynb`
 
 
 ## Evaluation
