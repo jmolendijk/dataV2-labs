@@ -43,7 +43,7 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 ├── evaluation/                    <- Evaluation results in csv
 ├── modeling-notebooks/            <- Notebooks with models and evaluation
 ├── README.md                      <- High level readme file
-└── src/                           <- .py files provided with data set and containing scripts to obtain basic descriptive statistics of the dataset
+└── src/                           <- scripts provided with data set to to obtain basic descriptive statistics of the dataset
 ```
 
 
