@@ -1,10 +1,13 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
 # Automatic playlist continuation
-inspired by [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
+Inspired by [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Introduction
-xxx
+People love playlist. Spotify reported that their users have generated over 4 bn playlists [2]. Various industry studies indicate that playlists account for a third of playtime [1] , and over a half of users say that playlists are replacing albums for them [2].
+
+Playlists carry benefist for consumers by providing personalised music discoverya and recommedations for various occasions, moods and themes.
+The importance of playlist for the music industry is also paramount, covering use cases like consumer engagement improvement, increased playtime, music search, but also helping less known artist get discovered though automatically generated playlists.
 
 ## Task
 
@@ -12,7 +15,7 @@ In this project I have applied Content Based filtering and collaborative filteri
 
 ## Dataset
 
-Dataset comes from original [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
+Dataset comes from original [1] [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Models
 The project used collaboartive filtering and content based filtering as two main approaches that were tested
@@ -41,8 +44,11 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 ├── modeling-notebooks/            <- Notebooks with models and evaluation
 ├── README.md                      <- High level readme file
 └── src/                           <- .py files provided with data set and containing scripts to obtain basic descriptive statistics of the                                       dataset
+```
 
 
-## Resources
+## Project Organization
+  
 
-* [xx](https://xx)
+[1] [C.W. Chen, P. Lamere, M. Schedl, and H. Zamani. Recsys Challenge 2018: Automatic Music Playlist Continuation. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ’18), 2018. ](https://arxiv.org/pdf/1810.01520.pdf)
+[2] [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
