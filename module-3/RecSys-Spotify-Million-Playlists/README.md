@@ -9,9 +9,7 @@ People love playlist. Spotify reported in 2008 that their users have generated o
 Playlists carry benefist for consumers by providing personalised music discovery and recommedations for various occasions, moods and themes.
 The importance of playlist for the music industry is also paramount, covering use cases like consumer engagement improvement, increased playtime, better music search, and also helping less known artist get discovered though automatically generated playlists.
 
-## Task
-
-In this project I have applied Content Based (CB) filtering and Collaborative Filtering (CF) to solve the task of automatic playlist creation based on first n tracks from a palylist or n randomly selected items from a playlist.
+In this project I have explored Content Based (CB) filtering and Collaborative Filtering (CF) with python to solve the task of automatic playlist creation based on first n tracks from a playlist or n randomly selected items from a playlist.
 
 ## Dataset
 
