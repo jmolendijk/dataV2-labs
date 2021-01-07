@@ -34,7 +34,6 @@ Notebooks:
    - Alternating Least Squares with Implicit
      - `modeling-notebooks/F02_Model_ALS_Implicit_binary.ipynb`
      - `modeling-notebooks/CF02_Model_ALS_Implicit_pos.ipynb`
-     - `modeling-notebooks/CF02_Model_ALS_Implicit_pos_full_data.ipynb`
    - SVD
      - `modeling-notebooks/CF03_Model_SVD_sparse_matrix_binary_ratings.ipynb`
      - `modeling-notebooks/CF03_Model_SVD_sparse_matrix_pos_ratings.ipynb`
