@@ -4,9 +4,9 @@
 Inspired by [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Introduction
-People love playlist. Spotify reported in 2008 that their users have generated over 4 bn playlists [2]. Various industry studies indicate that playlists account for a third of all music playtime [1], and over a half of users say that playlists are replacing albums in they music listening habbits [2].
+People love playlists. Spotify reported in 2008 that their users have generated over 4 bn playlists [2]. Various industry studies indicate that playlists account for a third of all music playtime [1], and over a half of users say that playlists are replacing albums in they music listening habits [2].
 
-Playlists carry benefist for consumers by providing personalised music discovery and recommedations for various occasions, moods and themes.
+Playlists create benefits for consumers by providing personalised music discovery and reccomendations for various occasions, moods and themes.
 The importance of playlist for the music industry is also paramount, covering use cases like consumer engagement improvement, increased playtime, better music search, and also helping less known artist get discovered though automatically generated playlists.
 
 In this project I have explored Content Based (CB) filtering and Collaborative Filtering (CF) with python to solve the task of automatic playlist creation based on first n tracks from a playlist or n randomly selected items from a playlist.
@@ -16,7 +16,7 @@ In this project I have explored Content Based (CB) filtering and Collaborative F
 Dataset comes from original [1] [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Models
-As mentioned above, the project used Collaboartive Filtering (CF) and Content Based (CB) filtering as two main approaches
+As mentioned above, the project used Collaborative Filtering (CF) and Content Based (CB) filtering as two main approaches
 
 #### Collaborative filtering 
 [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering): This method makes automatic predictions (filtering) about the interests of a user by collecting preferences or taste information from many users (collaborating). The underlying assumption of the collaborative filtering approach is that if a person A has the same opinion as a person B on a set of items, A is more likely to have B's opinion for a given item than that of a randomly chosen person.
