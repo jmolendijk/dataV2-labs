@@ -16,7 +16,7 @@ In this project I have explored Content Based (CB) filtering and Collaborative F
 Dataset comes from original [1] [Spotify Million Playlist Dataset Challenge](https://www.aicrowd.com/challenges/spotify-million-playlist-dataset-challenge)
 
 ## Models
-The project used Collaboartive Filtering (CF) and Content Based (CB) filtering as two main approaches
+As mentioned above, the project used Collaboartive Filtering (CF) and Content Based (CB) filtering as two main approaches
 
 #### Collaborative filtering 
 [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering): This method makes automatic predictions (filtering) about the interests of a user by collecting preferences or taste information from many users (collaborating). The underlying assumption of the collaborative filtering approach is that if a person A has the same opinion as a person B on a set of items, A is more likely to have B's opinion for a given item than that of a randomly chosen person.
@@ -52,6 +52,10 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 > - `R-precision`  measures the number of retrieved relevant tracks divided by the number of known relevant tracks (i.e., the number of withheld tracks)
 > - `Normalised Discounted Cumulative Gain (NDGS)`  Discounted Cumulative Gain (DCG) measures the ranking quality of the recommended tracks, increasing when relevant tracks are placed higher in the list. Normalized DCG (NDCG) is determined by calculating the DCG and dividing it by the ideal DCG in which the recommended tracks are perfectly ranked
 
+## Environment
+* python version: python 3.8.3
+* dependencies: `requirements.txt`
+
 ## Project Organization
   
 ```RecSys-Spotify-Million-Playlists/
@@ -59,6 +63,7 @@ To complete the evaluation, data set is split into pseudo train and test sets. E
 ├── evaluation/                    <- Evaluation results in csv
 ├── modeling-notebooks/            <- Notebooks with models and evaluation
 ├── README.md                      <- High level readme file
+├── requirements.txt               <- requirements.txt
 └── src/                           <- scripts provided with data set to to obtain basic descriptive statistics of the dataset
 ```
 
