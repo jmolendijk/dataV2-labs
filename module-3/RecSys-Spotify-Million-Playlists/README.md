@@ -31,8 +31,8 @@ Notebooks:
      - `modeling-notebooks/CF01_Model_Surprise_scaled_down.ipynb`
      - `modeling-notebooks/CF01_Model_Surprise_scaled_down.ipynb`
    - Alternating Least Squares with Implicit
-     - `modeling-notebooks/F02_Model_ALS_Implicit_binary.ipynb`
-     - `modeling-notebooks/CF02_Model_ALS_Implicit_pos.ipynb`
+     - `modeling-notebooks/F02_Model_ALS_Implicit_binary.ipynb` - contains demo
+     - `modeling-notebooks/CF02_Model_ALS_Implicit_pos.ipynb` - contains demo
    - SVD
      - `modeling-notebooks/CF03_Model_SVD_sparse_matrix_binary_ratings.ipynb`
      - `modeling-notebooks/CF03_Model_SVD_sparse_matrix_pos_ratings.ipynb`
@@ -41,7 +41,7 @@ Notebooks:
 [Content-Based Filtering](http://recommender-systems.org/content-based-filtering/): This method uses only information about the description and attributes of the items users has previously consumed to model user's preferences. In other words, these algorithms try to recommend items that are similar to those that a user liked in the past (or is examining in the present). In particular, various candidate items are compared with items previously rated by the user and the best-matching items are recommended.
 
 Notebooks:
-* `modeling-notebooks/CB00_audio_features.ipynb`
+* `modeling-notebooks/CB00_audio_features.ipynb` - contains demo
 * WIP: `modeling-notebooks/CB01_Audio_features_genres_data_preparation.ipynb`
 * WIP: `modeling-notebooks/CB01_Audio_features_genres_model.ipynb`
 
