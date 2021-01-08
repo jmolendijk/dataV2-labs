@@ -24,6 +24,7 @@ importlib-metadata @ file:///D:/bld/importlib-metadata_1607976096939/work
 ipykernel @ file:///D:/bld/ipykernel_1607737448354/work/dist/ipykernel-5.4.2-py3-none-any.whl
 ipython @ file:///D:/bld/ipython_1604159844946/work
 ipython-genutils==0.2.0
+ipywidgets @ file:///home/conda/feedstock_root/build_artifacts/ipywidgets_1609995587151/work
 jedi @ file:///D:/bld/jedi_1609162577777/work
 Jinja2==2.11.2
 joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1607956439537/work
@@ -35,6 +36,7 @@ jupyter-server @ file:///D:/bld/jupyter_server_1610032349745/work
 jupyterlab @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_1609830309460/work
 jupyterlab-pygments @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_pygments_1601375948261/work
 jupyterlab-server @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_server_1610051832526/work
+jupyterlab-widgets @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_widgets_1609173350931/work
 kiwisolver @ file:///D:/bld/kiwisolver_1604322452227/work
 MarkupSafe @ file:///D:/bld/markupsafe_1602267501600/work
 matplotlib @ file:///D:/bld/matplotlib-suite_1605180506412/work
@@ -89,6 +91,7 @@ traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_16027715
 urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1605225765842/work
 wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1600965781394/work
 webencodings==0.5.1
+widgetsnbextension @ file:///D:/bld/widgetsnbextension_1605475695976/work
 win-inet-pton @ file:///D:/bld/win_inet_pton_1602260115377/work
 wincertstore==0.2
 zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1603668650351/work
